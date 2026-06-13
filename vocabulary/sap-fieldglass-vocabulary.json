@@ -1,0 +1,113 @@
+{
+  "name": "SAP Fieldglass Vocabulary",
+  "description": "Business vocabulary and terminology used across SAP Fieldglass APIs for contingent workforce and services procurement management.",
+  "url": "https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/main/vocabulary/sap-fieldglass-vocabulary.json",
+  "tags": [
+    {
+      "name": "Approval",
+      "description": "SAP Fieldglass Approval API operations"
+    },
+    {
+      "name": "Audit Trail",
+      "description": "SAP Fieldglass Audit Trail API operations"
+    },
+    {
+      "name": "Order Confirmation",
+      "description": "SAP Fieldglass Order Confirmation API operations"
+    },
+    {
+      "name": "Results",
+      "description": "SAP Fieldglass Results API operations"
+    },
+    {
+      "name": "Reports",
+      "description": "SAP Fieldglass Reports API operations"
+    },
+    {
+      "name": "Get Providers",
+      "description": "SAP Fieldglass Get Providers API operations"
+    },
+    {
+      "name": "Get Metadata",
+      "description": "SAP Fieldglass Get Metadata API operations"
+    },
+    {
+      "name": "Get Entities",
+      "description": "SAP Fieldglass Get Entities API operations"
+    },
+    {
+      "name": "Get Data",
+      "description": "SAP Fieldglass Get Data API operations"
+    }
+  ],
+  "terms": [
+    {
+      "term": "Work Order",
+      "definition": "A document that defines the terms and conditions under which a contingent worker is engaged by a buyer through a supplier."
+    },
+    {
+      "term": "Statement of Work (SOW)",
+      "definition": "A formal document that captures and defines the work activities, deliverables, and timeline that a vendor must execute in performance of specified work for a client."
+    },
+    {
+      "term": "Contingent Worker",
+      "definition": "An external worker (contractor, consultant, temporary worker) who is not a full-time employee of the buyer organization."
+    },
+    {
+      "term": "Buyer",
+      "definition": "The organization procuring contingent workforce or services through SAP Fieldglass."
+    },
+    {
+      "term": "Supplier",
+      "definition": "The staffing firm or service provider that supplies workers or services to the buyer through SAP Fieldglass."
+    },
+    {
+      "term": "Vendor Management System (VMS)",
+      "definition": "Software that manages the procurement and management of contingent labor and services, including SAP Fieldglass."
+    },
+    {
+      "term": "Time Sheet",
+      "definition": "A record of hours worked by a contingent worker during a given period, submitted for approval and payment."
+    },
+    {
+      "term": "Approval Workflow",
+      "definition": "The sequence of approval steps required before a work item (work order, time sheet, invoice) is finalized in SAP Fieldglass."
+    },
+    {
+      "term": "Module ID",
+      "definition": "An identifier for a specific SAP Fieldglass business module (e.g., work orders, statements of work) used in API routing."
+    },
+    {
+      "term": "Work Item",
+      "definition": "A business document in SAP Fieldglass that requires an approval action, such as a work order, time sheet, or invoice."
+    },
+    {
+      "term": "OAuth 2.0",
+      "definition": "The authorization protocol used by SAP Fieldglass APIs to authenticate and authorize API clients."
+    },
+    {
+      "term": "Pick List",
+      "definition": "A configurable list of values in SAP Fieldglass used for field selection in forms and integration, such as worker types or cost centers."
+    },
+    {
+      "term": "Audit Trail",
+      "definition": "A chronological record of changes and actions performed in SAP Fieldglass for compliance and traceability."
+    },
+    {
+      "term": "Background Check",
+      "definition": "A verification process for contingent workers integrated with SAP Fieldglass to confirm worker eligibility."
+    },
+    {
+      "term": "SCIM",
+      "definition": "System for Cross-domain Identity Management \u2014 a standard protocol used by the SAP Fieldglass Identity Management API for user provisioning."
+    },
+    {
+      "term": "OData",
+      "definition": "Open Data Protocol used by the SAP Fieldglass analytic API to provide standardized access to business analytics data."
+    },
+    {
+      "term": "Business Analytics",
+      "definition": "Reporting and analytics capabilities in SAP Fieldglass providing insights into workforce spend, headcount, and performance."
+    }
+  ]
+}

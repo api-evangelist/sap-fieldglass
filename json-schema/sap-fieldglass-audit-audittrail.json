@@ -1,0 +1,147 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/main/json-schema/sap-fieldglass-audit-audittrail.json",
+  "title": "SAP Fieldglass Audit Trail API - auditTrail",
+  "description": "auditTrail schema for SAP Fieldglass Audit Trail API",
+  "type": "object",
+  "properties": {
+    "HEADER": {
+      "type": "object",
+      "properties": {
+        "appVersion": {
+          "type": "string",
+          "description": "App Version"
+        },
+        "OSUAStr": {
+          "type": "string",
+          "description": "App Version"
+        },
+        "numRecs": {
+          "type": "integer",
+          "description": "Number of records"
+        },
+        "status": {
+          "type": "string",
+          "description": "Status"
+        },
+        "details": {
+          "type": "string",
+          "description": "Details"
+        }
+      }
+    },
+    "PAYLOAD": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "&gt;- Reflects the type of subscription/delivery method or the type of integration connector being processed."
+          },
+          "company": {
+            "type": "string",
+            "description": "Client buyer code associated to the subscription/integration."
+          },
+          "startTime": {
+            "type": "string",
+            "description": "&gt;- Time and date associated to the start time of the subscription process or individual file transfer. Only applicable to integration file errors."
+          },
+          "stopTime": {
+            "type": "string",
+            "description": "Time and date associated to the stop time of the subscription process or individual file transfer"
+          },
+          "user": {
+            "type": "string",
+            "description": "Integration User associated to client integration process (systematic/manual)."
+          },
+          "category": {
+            "type": "string",
+            "description": "Description of source audit trail where the error/exception occurred from (the subscription/delivery audit trail or the integration audit trail of the delivered and processed file)."
+          },
+          "ID": {
+            "type": "string",
+            "description": "Unique ID associated to the specific integration file being processed within SAP Fieldglass."
+          },
+          "Attributes": {
+            "type": "object",
+            "properties": {
+              "version": {
+                "type": "string",
+                "description": "Reflects the current version and type of the integration connector."
+              },
+              "activity": {
+                "type": "string",
+                "description": "Upload"
+              },
+              "company": {
+                "type": "string",
+                "description": "Name of object as defined by user."
+              },
+              "documentStatus": {
+                "type": "string",
+                "description": "Status of the delivery of the integration between SAP Fieldglass and external platform."
+              },
+              "deliveryTime": {
+                "type": "integer",
+                "description": "Time associated to the subscription delivery of the integration (not the individually processed integration file)."
+              },
+              "deliveryStatus": {
+                "type": "string",
+                "description": "Reflected status of the subscription / delivery for the integration."
+              },
+              "message": {
+                "type": "boolean",
+                "description": "Detailed message associated to the delivery or document associated to the subscription and delivery of the integration."
+              },
+              "duration": {
+                "type": "string",
+                "description": "Amount of time associated to the processing of an integration file within SAP F Fieldglass."
+              },
+              "serverStatus": {
+                "type": "string",
+                "description": "Reflects the standard error message associated to the integration file processing."
+              },
+              "serverMessage": {
+                "type": "string",
+                "description": "Associated to errors on the subscription and individual integration files processing."
+              },
+              "recordsProcessed": {
+                "type": "string",
+                "description": "&gt;- Number of records processed within a file transfer. Not displayed for a subscription error."
+              },
+              "recordsFailed": {
+                "type": "string",
+                "description": " Number of records failed within a file transfer. Not displayed for a subscription error."
+              },
+              "clientReturnCode": {
+                "type": "string",
+                "description": ""
+              },
+              "clientMessage": {
+                "type": "string",
+                "description": ""
+              },
+              "crc32Checksum": {
+                "type": "string",
+                "description": ""
+              },
+              "uploadFile": {
+                "type": "string",
+                "description": "Name of the file associated to the integration."
+              }
+            }
+          },
+          "details": {
+            "type": "string",
+            "description": "All ok if response is OK."
+          },
+          "status": {
+            "type": "string",
+            "description": "Ok if response is OK."
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/main/json-schema/sap-fieldglass-bgcheck-orderconfirmation.json",
+  "title": "SAP Fieldglass Background Check API - OrderConfirmation",
+  "description": "OrderConfirmation schema for SAP Fieldglass Background Check API",
+  "type": "object",
+  "properties": {
+    "HEADER": {
+      "type": "object",
+      "properties": {
+        "AppVersion": {
+          "type": "string",
+          "description": "App version",
+          "example": "FieldglassAPIServer/1.0"
+        },
+        "OSUAStr": {
+          "type": "string",
+          "description": "Description",
+          "example": "FieldglassAPIServer/1.0"
+        },
+        "NumRecs": {
+          "type": "integer",
+          "description": "Number of records",
+          "example": 1
+        },
+        "Status": {
+          "type": "string",
+          "description": "Status",
+          "example": "ok"
+        },
+        "Details": {
+          "type": "string",
+          "description": "Details",
+          "example": "all ok"
+        }
+      }
+    },
+    "backgroundReportPackage": {
+      "type": "object",
+      "properties": {
+        "clientReferenceId": {
+          "type": "string",
+          "description": "Globally-unique SAP Fieldglass identifier of the object. This is the Work Order ID used for the drill down call in SAP Fieldglass. It is not visible to end users."
+        },
+        "providerReferenceId": {
+          "type": "string",
+          "description": "Candidate ID from background check provider."
+        }
+      }
+    },
+    "Status": {
+      "type": "string",
+      "description": "Status",
+      "example": "ok"
+    },
+    "Details": {
+      "type": "string",
+      "description": "Details",
+      "example": "all ok"
+    }
+  }
+}

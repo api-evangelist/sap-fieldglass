@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/main/json-schema/sap-fieldglass-audit-error.json",
+  "title": "SAP Fieldglass Audit Trail API - Error",
+  "description": "Error schema for SAP Fieldglass Audit Trail API",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "message": {
+      "type": "string"
+    },
+    "fields": {
+      "type": "string"
+    }
+  }
+}

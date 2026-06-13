@@ -1,0 +1,55 @@
+{
+  "name": "SAP Fieldglass Business Analytics API Examples",
+  "description": "Request examples for the SAP Fieldglass Business Analytics API",
+  "api": "Business Analytics API",
+  "examples": [
+    {
+      "method": "GET",
+      "path": "/report",
+      "summary": "Get a list of available reports",
+      "description": "Returns a list of all available reports including the report ID and name.",
+      "operationId": "getReports",
+      "parameters": [
+        {
+          "name": "Authorization",
+          "in": "header",
+          "required": false,
+          "description": "Only required for production access when using SAP Fieldglass."
+        },
+        {
+          "name": "X-ApplicationKey",
+          "in": "header",
+          "required": false,
+          "description": "The company-specific key provided by SAP Fieldglass for API access. Required for production access."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/report/{report_id}",
+      "summary": "Get a specific report",
+      "description": "Returns report data for the report ID specified by the user.",
+      "operationId": "getReportById",
+      "parameters": [
+        {
+          "name": "report_id",
+          "in": "path",
+          "required": true,
+          "description": "The ID of the report. You can obtain it by getting the list of available reports."
+        },
+        {
+          "name": "Authorization",
+          "in": "header",
+          "required": false,
+          "description": "Only required for production access when using SAP Fieldglass."
+        },
+        {
+          "name": "X-ApplicationKey",
+          "in": "header",
+          "required": false,
+          "description": "The company-specific key provided by SAP Fieldglass for API access. This is required for production access."
+        }
+      ]
+    }
+  ]
+}

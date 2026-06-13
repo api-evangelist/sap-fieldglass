@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/main/json-schema/sap-fieldglass-approval-status.json",
+  "title": "SAP Fieldglass Approval API - Status",
+  "description": "Status schema for SAP Fieldglass Approval API",
+  "type": "object",
+  "properties": {
+    "TransactionID": {
+      "type": "string",
+      "description": "Transaction ID."
+    },
+    "ReturnCode": {
+      "type": "integer",
+      "description": "Return code.",
+      "format": "int32"
+    },
+    "Message": {
+      "type": "string",
+      "description": "Message."
+    }
+  }
+}

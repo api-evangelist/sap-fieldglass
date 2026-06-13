@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/main/json-schema/sap-fieldglass-odata-status.json",
+  "title": "SAP Fieldglass OData-Based Analytic API - Status",
+  "description": "Status schema for SAP Fieldglass OData-Based Analytic API",
+  "type": "object",
+  "properties": {
+    "TransactionID": {
+      "type": "string",
+      "description": "Transaction ID."
+    },
+    "ReturnCode": {
+      "type": "integer",
+      "format": "int32",
+      "description": "Return Code"
+    },
+    "Message": {
+      "type": "string",
+      "description": "Message"
+    }
+  }
+}

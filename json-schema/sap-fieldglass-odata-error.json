@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/main/json-schema/sap-fieldglass-odata-error.json",
+  "title": "SAP Fieldglass OData-Based Analytic API - Error",
+  "description": "Error schema for SAP Fieldglass OData-Based Analytic API",
+  "type": "string"
+}

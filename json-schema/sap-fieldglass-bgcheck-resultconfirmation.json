@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/main/json-schema/sap-fieldglass-bgcheck-resultconfirmation.json",
+  "title": "SAP Fieldglass Background Check API - ResultConfirmation",
+  "description": "ResultConfirmation schema for SAP Fieldglass Background Check API",
+  "type": "object",
+  "properties": {
+    "HEADER": {
+      "type": "object",
+      "properties": {
+        "AppVersion": {
+          "type": "string",
+          "description": "App version",
+          "example": "FieldglassAPIServer/1.0"
+        },
+        "OSUAStr": {
+          "type": "string",
+          "description": "Description",
+          "example": "FieldglassAPIServer/1.0"
+        },
+        "NumRecs": {
+          "type": "integer",
+          "description": "Number of records",
+          "example": 1
+        },
+        "Status": {
+          "type": "string",
+          "description": "Status",
+          "example": "ok"
+        },
+        "Details": {
+          "type": "string",
+          "description": "Details",
+          "example": "all ok"
+        }
+      }
+    },
+    "backgroundReportPackage": {
+      "type": "object",
+      "properties": {
+        "providerReferenceId": {
+          "type": "string",
+          "description": "Background check order ID"
+        },
+        "orderStatus": {
+          "type": "string",
+          "description": "Overall order status"
+        },
+        "resultStatus": {
+          "type": "string",
+          "description": "Overall result status"
+        },
+        "dateOrderReceived": {
+          "type": "string",
+          "description": "Date order received"
+        },
+        "dateOrderCompleted": {
+          "type": "string",
+          "description": "Verification date"
+        },
+        "screenings": {
+          "type": "array",
+          "description": "Details about individual screenings",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Source name"
+              },
+              "description": {
+                "type": "string",
+                "description": "Source detail"
+              },
+              "type": {
+                "type": "string",
+                "description": "Test name"
+              },
+              "screeningStatus": {
+                "type": "string",
+                "description": "Screening status"
+              },
+              "screeningResultStatus": {
+                "type": "string",
+                "description": "Screening result status"
+              },
+              "dateOrderReceived": {
+                "type": "string",
+                "description": "Verification date"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -52,6 +52,8 @@ apis:
         url: https://api.sap.com/api/approvals/overview
       - type: Hub
         url: https://api.sap.com/api/approvals/resource
+      - type: OpenAPI
+        url: https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/refs/heads/main/openapi/sap-fieldglass-approval-openapi.yaml
   - name: SAP Fieldglass OData-Based Analytic API
     description: >-
       OData-based analytic API for SAP Fieldglass providing access to business analytics, reporting data, and
@@ -70,6 +72,8 @@ apis:
         url: https://api.sap.com/api/datahub/resource
       - type: Documentation
         url: https://help.sap.com/doc/3921dd506108442f9ddc6350cb0628c3/cloud/en-US/SAPFieldglassBusinessAnalyticsAPISpecifications.pdf
+      - type: OpenAPI
+        url: https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/refs/heads/main/openapi/sap-fieldglass-odata-analytic-openapi.json
   - name: SAP Fieldglass Identity Management API
     description: >-
       SCIM-based identity management API for SAP Fieldglass enabling user provisioning, deprovisioning, and lifecycle
@@ -117,6 +121,38 @@ apis:
         url: https://help.sap.com/doc/7baf3b6dbe4d4495a0e2afa668c70a76/cloud/en-US/SAPFieldglassBackgroundCheckAPITechnicalSpecifications.pdf
       - type: Hub
         url: https://api.sap.com/package/FieldglassAPI/rest
+      - type: OpenAPI
+        url: https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/refs/heads/main/openapi/sap-fieldglass-background-check-openapi.json
+  - name: SAP Fieldglass Audit Trail API
+    description: >-
+      Provides access to the audit trail of changes and actions performed in SAP Fieldglass, enabling
+      compliance tracking, change history retrieval, and activity monitoring for contingent workforce records.
+    humanURL: https://api.sap.com/package/FieldglassAPI/rest
+    baseURL: https://www.fieldglass.net/api/auditTrail
+    tags:
+      - Audit
+      - Compliance
+      - Monitoring
+    properties:
+      - type: Hub
+        url: https://api.sap.com/package/FieldglassAPI/rest
+      - type: OpenAPI
+        url: https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/refs/heads/main/openapi/sap-fieldglass-audit-trail-openapi.json
+  - name: SAP Fieldglass Business Analytics API
+    description: >-
+      REST API for accessing SAP Fieldglass business analytics reports, providing structured reporting data
+      for spend, headcount, and operational metrics related to contingent workforce management.
+    humanURL: https://api.sap.com/package/FieldglassAPI/rest
+    baseURL: https://www.fieldglass.net/api/report
+    tags:
+      - Analytics
+      - Business Intelligence
+      - Reporting
+    properties:
+      - type: Hub
+        url: https://api.sap.com/package/FieldglassAPI/rest
+      - type: OpenAPI
+        url: https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/refs/heads/main/openapi/sap-fieldglass-business-analytics-openapi.json
 common:
   - type: Website
     url: https://www.sap.com/products/hcm/contingent-workforce-management.html

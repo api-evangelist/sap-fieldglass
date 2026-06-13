@@ -1,0 +1,70 @@
+{
+  "name": "SAP Fieldglass Audit Trail API Examples",
+  "description": "Request examples for the SAP Fieldglass Audit Trail API",
+  "api": "Audit Trail API",
+  "examples": [
+    {
+      "method": "GET",
+      "path": "/auditTrail",
+      "summary": "Get audit trail details",
+      "description": "Returns audit trail details. When using this with query parameter pairs for start and stop times, you can limit the results to a particular timeframe.",
+      "operationId": "",
+      "parameters": [
+        {
+          "name": "Authorization",
+          "in": "header",
+          "required": false,
+          "description": "Only required for production access when using SAP Fieldglass."
+        },
+        {
+          "name": "X-ApplicationKey",
+          "in": "header",
+          "required": false,
+          "description": "The company-specific key provided by SAP Fieldglass for API access. This is required for production access."
+        },
+        {
+          "name": "Content-Type",
+          "in": "header",
+          "required": false,
+          "description": "This value is required in production and must be application/x-www-form-urlencoded."
+        },
+        {
+          "name": "TransactionId",
+          "in": "query",
+          "required": false,
+          "description": "Transaction ID for transmission."
+        },
+        {
+          "name": "PriorStartTime",
+          "in": "query",
+          "required": false,
+          "description": "Start time of the integration. Pair this with PriorStopTime."
+        },
+        {
+          "name": "CurrentStartTime",
+          "in": "query",
+          "required": false,
+          "description": "Start time of the integration. Pair this with CurrentStopTime."
+        },
+        {
+          "name": "PriorStopTime",
+          "in": "query",
+          "required": false,
+          "description": "Stop time of the integration. Pair this with PriorStartTime."
+        },
+        {
+          "name": "CurrentStopTime",
+          "in": "query",
+          "required": false,
+          "description": "Stop time of the integration. Pair this with CurrentStartTime."
+        },
+        {
+          "name": "Status",
+          "in": "query",
+          "required": false,
+          "description": "Error / OK status tied to the integration process to be filtered on."
+        }
+      ]
+    }
+  ]
+}

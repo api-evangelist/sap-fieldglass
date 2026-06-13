@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/main/json-schema/sap-fieldglass-approval-error.json",
+  "title": "SAP Fieldglass Approval API - Error",
+  "description": "Error schema for SAP Fieldglass Approval API",
+  "type": "string"
+}

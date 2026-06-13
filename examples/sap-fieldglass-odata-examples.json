@@ -1,0 +1,157 @@
+{
+  "name": "SAP Fieldglass SAP Fieldglass OData-Based Analytic API Examples",
+  "description": "Request examples for the SAP Fieldglass SAP Fieldglass OData-Based Analytic API",
+  "api": "SAP Fieldglass OData-Based Analytic API",
+  "examples": [
+    {
+      "method": "GET",
+      "path": "/Providers",
+      "summary": "Get all available providers.",
+      "description": "Returns available providers. The ProviderID can be used in subsequent operations to retrieve specific metadata and/or data.",
+      "operationId": "",
+      "parameters": [
+        {
+          "name": "",
+          "in": "",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "",
+          "in": "",
+          "required": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/{ProviderID}/$metadata",
+      "summary": "Get metadata for an entity.",
+      "description": "Returns metadata for the specified ProviderID. A JSON schema is returned representing the metadata.",
+      "operationId": "",
+      "parameters": [
+        {
+          "name": "",
+          "in": "",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "",
+          "in": "",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "ProviderID",
+          "in": "path",
+          "required": true,
+          "description": "The ID for the entity (in this case, the report). This is returned when getting all providers."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/{ServiceURL}",
+      "summary": "Get all available entities.",
+      "description": "Returns all available entities. You can use the name returned in conjunction with the ProviderID to get data about a particular entity.",
+      "operationId": "",
+      "parameters": [
+        {
+          "name": "",
+          "in": "",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "",
+          "in": "",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "ServiceURL",
+          "in": "path",
+          "required": true,
+          "description": "Service URL from provider. This is returned when getting all providers."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/{ProviderID}/{entityName}",
+      "summary": "Get data for an entity.",
+      "description": "Returns data for the specified ProviderID and entity.",
+      "operationId": "",
+      "parameters": [
+        {
+          "name": "",
+          "in": "",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "",
+          "in": "",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "ProviderID",
+          "in": "path",
+          "required": true,
+          "description": "The ID for the entity (in this case, the report)."
+        },
+        {
+          "name": "entityName",
+          "in": "path",
+          "required": true,
+          "description": "The name of the entity (report). It can be obtained via the GET /{ServiceURL} operation."
+        },
+        {
+          "name": "",
+          "in": "",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "",
+          "in": "",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "",
+          "in": "",
+          "required": false,
+          "description": ""
+        },
+        {
+          "name": "$orderby",
+          "in": "query",
+          "required": false,
+          "description": "The property or properties used to order the results. If there is more than one, separate using a comma. You can also specify asc for ascending and desc for descending order. For more information, see [OData Sorting](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html#_Toc445374629)."
+        },
+        {
+          "name": "$select",
+          "in": "query",
+          "required": false,
+          "description": "Provide a comma-separated list of the properties to be returned. For more information, see [OData Select](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html#_Toc445374620)."
+        },
+        {
+          "name": "packageSize",
+          "in": "query",
+          "required": false,
+          "description": "Provide the number of rows returned per page."
+        },
+        {
+          "name": "pageNum",
+          "in": "query",
+          "required": false,
+          "description": "Where returned data spans multiple pages, specify the number of the page to return."
+        }
+      ]
+    }
+  ]
+}

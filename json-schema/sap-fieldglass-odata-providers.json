@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/main/json-schema/sap-fieldglass-odata-providers.json",
+  "title": "SAP Fieldglass OData-Based Analytic API - Providers",
+  "description": "Providers schema for SAP Fieldglass OData-Based Analytic API",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "ProviderID": {
+        "type": "string",
+        "example": "report_Worker"
+      },
+      "NamespaceID": {
+        "type": "string",
+        "example": "fieldglass.insite"
+      },
+      "Description": {
+        "type": "string",
+        "example": "description"
+      },
+      "DeltaMethod": {
+        "type": "string"
+      },
+      "ServiceURL": {
+        "type": "string",
+        "example": "/api/data_hub/report_Worker/"
+      }
+    }
+  }
+}

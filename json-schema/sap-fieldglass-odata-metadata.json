@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/main/json-schema/sap-fieldglass-odata-metadata.json",
+  "title": "SAP Fieldglass OData-Based Analytic API - metaData",
+  "description": "metaData schema for SAP Fieldglass OData-Based Analytic API",
+  "properties": {
+    "Schema": {
+      "type": "object",
+      "properties": {
+        "-Namespace": {
+          "type": "string",
+          "example": "fieldglass.insite"
+        },
+        "-Alias": {
+          "type": "string",
+          "example": "insite"
+        },
+        "EntityType": {
+          "type": "object",
+          "properties": {
+            "-Name": {
+              "type": "string"
+            },
+            "Key": {
+              "type": "object",
+              "properties": {
+                "PropertyRef": {
+                  "type": "object",
+                  "properties": {
+                    "-Name": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "Property": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "-Name": {
+                    "type": "string",
+                    "example": "business_unit"
+                  },
+                  "-Type": {
+                    "type": "string",
+                    "example": "Edm.String"
+                  },
+                  "-MaxLength": {
+                    "type": "string",
+                    "example": "100"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "EntityContainer": {
+          "type": "object",
+          "properties": {
+            "-Name": {
+              "type": "string",
+              "example": "dbContainer"
+            },
+            "EntitySet": {
+              "type": "object",
+              "properties": {
+                "-Name": {
+                  "type": "string",
+                  "example": "job_postings"
+                },
+                "-EntityType": {
+                  "type": "string",
+                  "example": "insite.job_posting"
+                },
+                "Annotation": {
+                  "type": "object",
+                  "properties": {
+                    "-Term": {
+                      "type": "string",
+                      "example": "Capabilities.Supported"
+                    },
+                    "Record": {
+                      "type": "object",
+                      "properties": {
+                        "PropertyValue": {
+                          "type": "object",
+                          "properties": {
+                            "-Property": {
+                              "type": "string",
+                              "example": "Supported"
+                            },
+                            "Bool": {
+                              "type": "string",
+                              "example": "false"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

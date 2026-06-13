@@ -1,0 +1,79 @@
+{
+  "name": "SAP Fieldglass SAP Fieldglass Background Check API Examples",
+  "description": "Request examples for the SAP Fieldglass SAP Fieldglass Background Check API",
+  "api": "SAP Fieldglass Background Check API",
+  "examples": [
+    {
+      "method": "POST",
+      "path": "/order_confirmation",
+      "summary": "Provides confirmation of a background check request",
+      "description": "Posts a background check request acknowledgment to SAP Fieldglass.",
+      "operationId": "",
+      "parameters": [
+        {
+          "name": "Authorization",
+          "in": "header",
+          "required": false,
+          "description": "Only required for production access when using SAP Fieldglass."
+        },
+        {
+          "name": "Content-Type",
+          "in": "header",
+          "required": false,
+          "description": "JSON format is supported. This value is application/json."
+        },
+        {
+          "name": "X-ApplicationKey",
+          "in": "header",
+          "required": false,
+          "description": "The company-specific key provided by SAP Fieldglass for API access."
+        },
+        {
+          "name": "Body",
+          "in": "body",
+          "required": true,
+          "description": "The body of the request."
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/result",
+      "summary": "Provides results for the work order",
+      "description": "Posts results for a specific background check request.",
+      "operationId": "",
+      "parameters": [
+        {
+          "name": "Authorization",
+          "in": "header",
+          "required": false,
+          "description": "Only required for production access when using SAP Fieldglass."
+        },
+        {
+          "name": "Content-Type",
+          "in": "header",
+          "required": false,
+          "description": "JSON format is supported. This value is application/json."
+        },
+        {
+          "name": "X-ApplicationKey",
+          "in": "header",
+          "required": false,
+          "description": "The company-specific key provided by SAP Fieldglass for API access."
+        },
+        {
+          "name": "Body",
+          "in": "body",
+          "required": true,
+          "description": "The body of the request."
+        },
+        {
+          "name": "clientReferenceId",
+          "in": "query",
+          "required": true,
+          "description": "Globally-unique SAP Fieldglass identifier of the object. This is the Work Order ID used for the drill-down call in SAP Fieldglass. It is not visible to end users."
+        }
+      ]
+    }
+  ]
+}

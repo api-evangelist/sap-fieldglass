@@ -1,0 +1,166 @@
+{
+  "name": "SAP Fieldglass Approval API Examples",
+  "description": "Request examples for the SAP Fieldglass Approval API",
+  "api": "Approval API",
+  "examples": [
+    {
+      "method": "GET",
+      "path": "/approvals",
+      "summary": "Get a list of items that require approval",
+      "description": "Returns a list of work items requiring approval action.",
+      "operationId": "getItemListForApproval",
+      "parameters": [
+        {
+          "name": "Authorization",
+          "in": "header",
+          "required": false,
+          "description": "Only required for production access when using SAP Fieldglass."
+        },
+        {
+          "name": "X-ApplicationKey",
+          "in": "header",
+          "required": false,
+          "description": "The company-specific key provided by SAP Fieldglass for API access. Required for production access."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/approvals/module_{moduleId}",
+      "summary": "Get items that require approval for a module",
+      "description": "Returns a list of work items requiring approval action, filtered down to a specific module.",
+      "operationId": "getItemListFroApprovalByModule",
+      "parameters": [
+        {
+          "name": "Authorization",
+          "in": "header",
+          "required": false,
+          "description": "Only required for production access when using SAP Fieldglass."
+        },
+        {
+          "name": "X-ApplicationKey",
+          "in": "header",
+          "required": false,
+          "description": "The company-specific key provided by SAP Fieldglass for API access. Required for production access."
+        },
+        {
+          "name": "moduleId",
+          "in": "path",
+          "required": true,
+          "description": "The ID for the module (for example, 40 for Job Posting or 270 for Work Order). A full list can be found in the supporting documentation."
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/approvals/module_{moduleId}/{workItemId}/action/{action}",
+      "summary": "Approve or reject an item",
+      "description": "Take action on the work item by either approving or rejecting it.",
+      "operationId": "approveOrRejectItem",
+      "parameters": [
+        {
+          "name": "Authorization",
+          "in": "header",
+          "required": false,
+          "description": "Only required for production access when using SAP Fieldglass."
+        },
+        {
+          "name": "X-ApplicationKey",
+          "in": "header",
+          "required": false,
+          "description": "The company-specific key provided by SAP Fieldglass for API access. Required for production access."
+        },
+        {
+          "name": "moduleId",
+          "in": "path",
+          "required": true,
+          "description": "The ID for the module (for example, 40 for Job Posting or 270 for Work Order). A full list can be found in the supporting documentation."
+        },
+        {
+          "name": "workItemId",
+          "in": "path",
+          "required": true,
+          "description": "The ID of the work item. You can get this from the response received when getting the list of items that require approval."
+        },
+        {
+          "name": "action",
+          "in": "path",
+          "required": true,
+          "description": "The action to take on the work item. This can be either ''approve'' or ''reject''. If it is reject, the reasonId is required."
+        },
+        {
+          "name": "comments",
+          "in": "query",
+          "required": false,
+          "description": "Any comments about the action."
+        },
+        {
+          "name": "reasonId",
+          "in": "query",
+          "required": false,
+          "description": "The reasonId for the rejection. This is required when the action is 'reject'. You can get a list of rejection reasons available for the module from the response when getting rejection reasons."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/approvals/module_{moduleId}/{workItemId}",
+      "summary": "Get details for work item",
+      "description": "Returns details for a specific work item.",
+      "operationId": "getWorkItemDetail",
+      "parameters": [
+        {
+          "name": "Authorization",
+          "in": "header",
+          "required": false,
+          "description": "Only required for production access when using SAP Fieldglass."
+        },
+        {
+          "name": "X-ApplicationKey",
+          "in": "header",
+          "required": false,
+          "description": "The company-specific key provided by SAP Fieldglass for API access. Required for production access."
+        },
+        {
+          "name": "moduleId",
+          "in": "path",
+          "required": true,
+          "description": "The ID for the module (for example, 40 for Job Posting or 270 for Work Order). A full list can be found in the supporting documentation."
+        },
+        {
+          "name": "workItemId",
+          "in": "path",
+          "required": true,
+          "description": "The ID of the work item."
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/approvals/reject_reasons/module_{moduleId}",
+      "summary": "Get rejection reasons",
+      "description": "Returns all configured work item rejection reasons by module.",
+      "operationId": "getRejectionReasons",
+      "parameters": [
+        {
+          "name": "Authorization",
+          "in": "header",
+          "required": false,
+          "description": "Only required for production access when using SAP Fieldglass."
+        },
+        {
+          "name": "X-ApplicationKey",
+          "in": "header",
+          "required": false,
+          "description": "The company-specific key provided by SAP Fieldglass for API access. Required for production access."
+        },
+        {
+          "name": "moduleId",
+          "in": "path",
+          "required": true,
+          "description": "The ID for the module (for example, 40 for Job Posting or 270 for Work Order). A full list can be found in the supporting documentation."
+        }
+      ]
+    }
+  ]
+}

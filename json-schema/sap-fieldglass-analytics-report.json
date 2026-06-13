@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/main/json-schema/sap-fieldglass-analytics-report.json",
+  "title": "SAP Fieldglass Business Analytics API - report",
+  "description": "report schema for SAP Fieldglass Business Analytics API",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "maxLength": 24,
+      "description": "Unique identifier representing a specific report."
+    },
+    "name": {
+      "type": "string",
+      "maxLength": 500,
+      "description": "Name of the report."
+    },
+    "dataType": {
+      "type": "string",
+      "description": "Data type."
+    },
+    "maxLength": {
+      "type": "string",
+      "description": "Max length."
+    },
+    "analyticType": {
+      "type": "string",
+      "description": "Analytic Type."
+    },
+    "semanticType": {
+      "type": "string",
+      "description": "Semantic type."
+    },
+    "measureUnitType": {
+      "type": "string",
+      "description": "Measure unit type."
+    },
+    "measureUnits": {
+      "type": "string",
+      "description": "Measure units."
+    },
+    "measureAggregation": {
+      "type": "string",
+      "description": "Measure aggregation."
+    },
+    "scale": {
+      "type": "string",
+      "description": "Scale."
+    }
+  }
+}

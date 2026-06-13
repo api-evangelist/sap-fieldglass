@@ -1,0 +1,83 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "fieldglass": "https://www.fieldglass.net/api/ontology#",
+    "sap": "https://api.sap.com/ontology#",
+    "WorkOrder": "fieldglass:WorkOrder",
+    "StatementOfWork": "fieldglass:StatementOfWork",
+    "ContingentWorker": "fieldglass:ContingentWorker",
+    "Supplier": "fieldglass:Supplier",
+    "Buyer": "fieldglass:Buyer",
+    "TimeSheet": "fieldglass:TimeSheet",
+    "Invoice": "fieldglass:Invoice",
+    "WorkItem": "fieldglass:WorkItem",
+    "ApprovalAction": "fieldglass:ApprovalAction",
+    "AuditTrail": "fieldglass:AuditTrail",
+    "BackgroundCheck": "fieldglass:BackgroundCheck",
+    "PickList": "fieldglass:PickList",
+    "approvals": "fieldglass:approvals",
+    "moduleId": "fieldglass:moduleId",
+    "workItemId": "fieldglass:workItemId",
+    "action": "fieldglass:action",
+    "rejectReasons": "fieldglass:rejectReasons",
+    "auditTrail": "fieldglass:auditTrail",
+    "orderConfirmation": "fieldglass:orderConfirmation",
+    "result": "fieldglass:result",
+    "report": "fieldglass:report",
+    "name": "schema:name",
+    "description": "schema:description",
+    "identifier": "schema:identifier",
+    "status": "schema:status",
+    "startDate": "schema:startDate",
+    "endDate": "schema:endDate",
+    "price": "schema:price",
+    "priceCurrency": "schema:priceCurrency",
+    "provider": "schema:provider",
+    "employee": "schema:employee",
+    "employer": "schema:employer",
+    "Organization": "schema:Organization",
+    "Person": "schema:Person",
+    "Service": "schema:Service",
+    "id": "@id",
+    "type": "@type",
+    "value": "@value",
+    "language": "@language"
+  },
+  "@graph": [
+    {
+      "@id": "fieldglass:WorkOrder",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Work Order",
+      "rdfs:comment": "A document defining engagement terms for a contingent worker in SAP Fieldglass",
+      "rdfs:subClassOf": "schema:Order"
+    },
+    {
+      "@id": "fieldglass:StatementOfWork",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Statement of Work",
+      "rdfs:comment": "A formal document capturing work activities, deliverables, and timeline for service engagements",
+      "rdfs:subClassOf": "schema:Service"
+    },
+    {
+      "@id": "fieldglass:ContingentWorker",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Contingent Worker",
+      "rdfs:comment": "An external worker engaged through SAP Fieldglass who is not a full-time employee",
+      "rdfs:subClassOf": "schema:Person"
+    },
+    {
+      "@id": "fieldglass:WorkItem",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Work Item",
+      "rdfs:comment": "A business document in SAP Fieldglass requiring approval action",
+      "rdfs:subClassOf": "schema:Action"
+    },
+    {
+      "@id": "fieldglass:AuditTrail",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Audit Trail",
+      "rdfs:comment": "Chronological record of changes and actions in SAP Fieldglass",
+      "rdfs:subClassOf": "schema:Event"
+    }
+  ]
+}
