@@ -1,0 +1,55 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: SAP Fieldglass
+providerId: sap-fieldglass
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: false
+tags:
+  - Rate Limiting
+  - Contingent Workforce
+  - External Talent
+  - Services Procurement
+  - Vendor Management
+  - Workforce Management
+description: >-
+  SAP Fieldglass REST API rate limits are governed by the customer's enterprise contract and SAP Business Technology
+  Platform (BTP) entitlements. Rate limit documentation is available through the SAP Help Portal and per-customer
+  integration configuration, not via a public rate card.
+sources:
+  - https://help.sap.com/docs/SAP_FIELDGLASS_INTEGRATION
+  - https://api.sap.com/package/FieldglassAPI/rest
+  - https://www.fieldglass.com
+notes: >-
+  Specific numeric rate limits for SAP Fieldglass APIs are not publicly documented. Limits depend on the customer's
+  BTP entitlement, contract tier, and integration type. OAuth 2.0 tokens are used for authentication; token
+  expiration and refresh policies are documented in the SAP Fieldglass REST API Integration General Reference Guide.
+  Contact SAP support or your account team for tenant-specific rate limit information.
+responseCodes:
+  throttled: 429
+limits:
+  - name: Per-tenant API quotas
+    scope: account/tenant
+    metric: requests
+    limit: see provider documentation; contract-governed
+  - name: OAuth 2.0 token lifetime
+    scope: session
+    metric: token
+    limit: see provider documentation; per integration configuration
+policies:
+  - name: Documentation location
+    description: >-
+      Rate limits are documented per service in the SAP Help Portal REST API Integration General Reference Guide
+      and within the SAP Fieldglass configuration manager integration tools.
+  - name: Contract-governed
+    description: >-
+      Effective API limits depend on the customer's SAP BTP entitlement, the specific Fieldglass modules licensed,
+      and the negotiated enterprise contract terms.
+  - name: OAuth 2.0 authentication required
+    description: >-
+      All SAP Fieldglass REST API calls require OAuth 2.0 authentication. Requests without valid tokens are
+      rejected regardless of rate limit status.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

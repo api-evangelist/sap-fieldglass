@@ -1,0 +1,190 @@
+aid: sap-fieldglass
+name: SAP Fieldglass
+description: >-
+  SAP Fieldglass is a cloud-based vendor management system (VMS) that enables organizations to manage their contingent
+  workforce, services procurement, and external talent. It provides REST APIs for managing work orders, job postings,
+  statements of work, worker profiles, time sheets, invoices, and external talent across more than 165 countries.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/refs/heads/main/apis.yml
+created: '2026-06-13'
+modified: '2026-06-13'
+specificationVersion: '0.19'
+tags:
+  - Contingent Workforce
+  - External Talent
+  - Human Capital Management
+  - Services Procurement
+  - Statements of Work
+  - Vendor Management
+  - Workforce Management
+apis:
+  - name: SAP Fieldglass REST API
+    description: >-
+      Core REST API for SAP Fieldglass that allows clients to send and receive integrated data directly against the
+      application. Supports upload (POST/PUT) and download (GET) of data in JSON and CSV formats for contingent
+      workforce and services procurement management.
+    humanURL: https://help.sap.com/docs/SAP_FIELDGLASS_INTEGRATION
+    baseURL: https://www.fieldglass.net/api
+    tags:
+      - Contingent Workforce
+      - Integration
+      - REST
+      - Work Orders
+    properties:
+      - type: Documentation
+        url: https://help.sap.com/doc/a5fdbd31ebe94832aef0eb79066a8087/cloud/en-US/SAPFieldglassRESTAPIIntegrationGeneralReferenceGuide.pdf
+      - type: Hub
+        url: https://api.sap.com/package/FieldglassAPI/rest
+      - type: Authentication
+        url: https://help.sap.com/docs/SAP_FIELDGLASS_INTEGRATION
+  - name: SAP Fieldglass Approval API
+    description: >-
+      Enables programmatic approval workflows for contingent workforce and services procurement documents including
+      work orders, statements of work, and time sheets within SAP Fieldglass.
+    humanURL: https://api.sap.com/api/approvals/overview
+    baseURL: https://www.fieldglass.net/api/approvals
+    tags:
+      - Approvals
+      - Workflows
+      - Work Orders
+    properties:
+      - type: Documentation
+        url: https://api.sap.com/api/approvals/overview
+      - type: Hub
+        url: https://api.sap.com/api/approvals/resource
+  - name: SAP Fieldglass OData-Based Analytic API
+    description: >-
+      OData-based analytic API for SAP Fieldglass providing access to business analytics, reporting data, and
+      operational metrics for contingent workforce and services procurement management.
+    humanURL: https://api.sap.com/api/datahub/overview
+    baseURL: https://www.fieldglass.net/api/datahub
+    tags:
+      - Analytics
+      - Business Intelligence
+      - OData
+      - Reporting
+    properties:
+      - type: Documentation
+        url: https://api.sap.com/api/datahub/overview
+      - type: Hub
+        url: https://api.sap.com/api/datahub/resource
+      - type: Documentation
+        url: https://help.sap.com/doc/3921dd506108442f9ddc6350cb0628c3/cloud/en-US/SAPFieldglassBusinessAnalyticsAPISpecifications.pdf
+  - name: SAP Fieldglass Identity Management API
+    description: >-
+      SCIM-based identity management API for SAP Fieldglass enabling user provisioning, deprovisioning, and lifecycle
+      management for workers, buyers, and suppliers across the contingent workforce platform.
+    humanURL: https://api.sap.com/api/scim/overview
+    baseURL: https://www.fieldglass.net/api/scim
+    tags:
+      - Identity Management
+      - Provisioning
+      - SCIM
+      - User Management
+    properties:
+      - type: Documentation
+        url: https://api.sap.com/api/scim/overview
+      - type: Hub
+        url: https://api.sap.com/package/FieldglassAPI/rest
+  - name: SAP Fieldglass Pick List Value Download API
+    description: >-
+      Retrieves configurable pick list values from SAP Fieldglass for use in integration and data validation,
+      including worker types, cost centers, regions, and other reference data.
+    humanURL: https://api.sap.com/api/pickListValueDownload/resource
+    baseURL: https://www.fieldglass.net/api/pickListValues
+    tags:
+      - Configuration
+      - Pick Lists
+      - Reference Data
+    properties:
+      - type: Documentation
+        url: https://api.sap.com/api/pickListValueDownload/resource
+      - type: Hub
+        url: https://api.sap.com/package/FieldglassAPI/rest
+  - name: SAP Fieldglass Background Check API
+    description: >-
+      Integrates background check services with SAP Fieldglass work orders, enabling posting of background check
+      results and status updates for contingent workers tied to specific work order IDs.
+    humanURL: https://help.sap.com/doc/7baf3b6dbe4d4495a0e2afa668c70a76/cloud/en-US/SAPFieldglassBackgroundCheckAPITechnicalSpecifications.pdf
+    baseURL: https://www.fieldglass.net/api/backgroundCheck
+    tags:
+      - Background Checks
+      - Compliance
+      - Work Orders
+      - Workers
+    properties:
+      - type: Documentation
+        url: https://help.sap.com/doc/7baf3b6dbe4d4495a0e2afa668c70a76/cloud/en-US/SAPFieldglassBackgroundCheckAPITechnicalSpecifications.pdf
+      - type: Hub
+        url: https://api.sap.com/package/FieldglassAPI/rest
+common:
+  - type: Website
+    url: https://www.sap.com/products/hcm/contingent-workforce-management.html
+  - type: Documentation
+    url: https://help.sap.com/docs/SAP_FIELDGLASS_INTEGRATION
+  - type: GitHubOrg
+    url: https://github.com/SAP
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/sapfieldglass/
+  - type: Blog
+    url: https://community.sap.com/t5/spend-management-blog-posts-by-sap/bg-p/spend-management-blog-posts-by-sap
+  - type: Pricing
+    url: https://www.sap.com/products/hcm/contingent-workforce-management/pricing.html
+  - type: StatusPage
+    url: https://www.sap.com/about/trust-center/cloud-service-status.html
+  - type: X
+    url: https://x.com/sapfieldglass
+  - type: Plans
+    url: plans/sap-fieldglass-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/sap-fieldglass-rate-limits.yml
+  - type: FinOps
+    url: finops/sap-fieldglass-finops.yml
+  - type: Authentication
+    url: https://help.sap.com/docs/SAP_FIELDGLASS_INTEGRATION
+  - type: Hub
+    url: https://api.sap.com/package/FieldglassAPI/overview
+  - type: Hub
+    url: https://api.sap.com/package/FieldglassAPI/rest
+    title: REST APIs
+  - type: Community
+    url: https://pages.community.sap.com/topics/spend-management/fieldglass
+  - type: Support
+    url: https://help.sap.com/docs/SAP_Fieldglass
+  - type: TermsOfService
+    url: https://www.fieldglass.com/terms-and-conditions
+  - type: PrivacyPolicy
+    url: https://www.fieldglass.com/privacy-policy
+  - type: Features
+    data:
+      - name: Contingent Workforce Management
+        description: End-to-end management of contingent workers including job postings, work orders, time sheets, and invoicing.
+      - name: Services Procurement
+        description: Manage service engagements and statements of work with suppliers and service providers.
+      - name: External Talent Management
+        description: Source, engage, and manage external talent across gig workers and contractors in 165+ countries.
+      - name: Vendor Management System
+        description: Track and manage supplier relationships, rates, and performance for the external workforce.
+      - name: OAuth 2.0 Authentication
+        description: Secure API access using OAuth 2.0 protocol supporting web server, installed, and client-side application scenarios.
+  - type: UseCases
+    data:
+      - name: Work Order Management
+        description: Create, manage, and track work orders for contingent workers through the full engagement lifecycle.
+      - name: Statement of Work Integration
+        description: Integrate services procurement statements of work with ERP and financial systems.
+      - name: Workforce Analytics
+        description: Access analytics and reporting data on external workforce spend, headcount, and performance.
+      - name: Identity Provisioning
+        description: Automate worker onboarding and offboarding with SCIM-based identity management.
+  - type: Integrations
+    data:
+      - name: SAP S/4HANA
+        description: Native integration with SAP ERP for purchase orders, invoices, cost centers, and financial data.
+      - name: SAP SuccessFactors
+        description: Total workforce management integration connecting internal and external talent management.
+      - name: SAP Ariba
+        description: Combined services procurement workflow connecting Ariba sourcing with Fieldglass worker management.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

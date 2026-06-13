@@ -1,0 +1,88 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: SAP Fieldglass
+providerId: sap-fieldglass
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: false
+tags:
+  - FinOps
+  - FOCUS
+  - Contingent Workforce
+  - External Talent
+  - Human Capital Management
+  - Services Procurement
+  - Vendor Management
+  - Workforce Management
+description: >-
+  FOCUS-aligned FinOps placeholder for SAP Fieldglass. Enterprise VMS licensed on a module and transaction-volume
+  basis with annual true-up provisions. Specific pricing metrics are contract-only and not publicly published.
+sources:
+  - https://www.sap.com/products/hcm/contingent-workforce-management/pricing.html
+  - https://www.sap.com/products/spend-management/services-procurement/pricing.html
+  - https://www.fieldglass.com
+notes: >-
+  SAP Fieldglass does not publish a machine-readable public rate card. Meters and FOCUS columns below are
+  placeholders to be reconciled once contract or partner-portal terms are available. Billing is typically
+  invoice-based through SAP SE or an authorized SAP reseller.
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: SAP SE
+serviceCategory: Vendor Management / Human Capital Management
+billingModel:
+  pricingCategory: Enterprise Contract
+  billingFrequency: Annual
+  billingCurrency: USD/EUR/varies
+  chargeCategories:
+    - Purchase
+    - Usage
+    - Tax
+    - Adjustment
+focusColumns:
+  ServiceName: SAP Fieldglass
+  ServiceCategory: Vendor Management / Human Capital Management
+  ProviderName: SAP Fieldglass
+  PublisherName: SAP SE
+  InvoiceIssuerName: SAP SE
+  BillingCurrency: USD
+meters:
+  - name: contingent_worker_transactions
+    description: >-
+      Volume of contingent workforce transactions processed through SAP Fieldglass including work orders,
+      time sheets, and invoices; reconcile to actual provider-published metrics once available.
+    unit: transactions
+    aggregation: sum
+    dimensions:
+      - module
+      - region
+      - worker_type
+  - name: sow_spend_under_management
+    description: >-
+      Total spend under management for services procurement statements of work processed through SAP Fieldglass.
+    unit: currency
+    aggregation: sum
+    dimensions:
+      - module
+      - region
+      - supplier
+principles:
+  - name: Visibility
+    description: >-
+      Use SAP for Me or the SAP BTP Cockpit to view consumption against entitlements; line items appear on
+      the SAP invoice from SAP SE or the authorized reseller.
+  - name: Optimization
+    description: >-
+      Monitor worker transaction volume and SOW spend under management to right-size licensing tiers before
+      annual renewal and true-up events.
+  - name: Accountability
+    description: >-
+      Assign Fieldglass module usage to business units using cost center data available through the
+      SAP Fieldglass OData-Based Analytic API for chargeback and showback reporting.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

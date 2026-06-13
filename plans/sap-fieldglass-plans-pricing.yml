@@ -1,0 +1,58 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: SAP Fieldglass
+providerId: sap-fieldglass
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: false
+tags:
+  - Contingent Workforce
+  - External Talent
+  - Human Capital Management
+  - Services Procurement
+  - Vendor Management
+  - Workforce Management
+description: >-
+  SAP Fieldglass is an enterprise vendor management system (VMS) sold through SAP enterprise sales and partner channels.
+  Pricing is contract-negotiated based on modules selected, number of workers managed, transaction volume, and
+  geographic deployment. No public rate card is published; all commercial terms require sales engagement.
+sources:
+  - https://www.sap.com/products/hcm/contingent-workforce-management/pricing.html
+  - https://www.sap.com/products/spend-management/services-procurement/pricing.html
+  - https://www.fieldglass.com
+notes: >-
+  SAP Fieldglass pricing is enterprise-only and not publicly disclosed. Pricing pages on sap.com redirect to
+  contact-sales forms. Licensing is typically metric-based (worker transactions, SOW spend under management) with
+  true-up provisions for overages per negotiated contract terms.
+plans:
+  - id: sap-fieldglass-contact-sales
+    name: Contact Sales
+    type: enterprise
+    description: >-
+      All commercial terms for SAP Fieldglass are negotiated through SAP enterprise sales, the SAP Store, or authorized
+      SAP partners. Pricing is based on modules (Contingent Workforce, Services Procurement, External Talent), managed
+      workforce size, and annual transaction volume.
+    entries:
+      - label: Custom enterprise contract
+        name: custom
+        type: subscription
+        metric: varies
+        limit: -1
+        timeFrame: year
+        geo: configurable
+        unit: 1
+        price: contact sales
+        userMultiplied: false
+    elements:
+      - name: SAP Sales Engagement
+      - name: SAP Store
+      - name: SAP Partner Channel
+      - name: Contingent Workforce Management Module
+      - name: Services Procurement Module
+      - name: External Talent Management Module
+      - name: Analytics and Reporting
+      - name: API Integration Access
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
