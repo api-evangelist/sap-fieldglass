@@ -4,7 +4,7 @@ description: >-
   SAP Fieldglass is a cloud-based vendor management system (VMS) that enables organizations to manage their contingent
   workforce, services procurement, and external talent. It provides REST APIs for managing work orders, job postings,
   statements of work, worker profiles, time sheets, invoices, and external talent across more than 165 countries.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
