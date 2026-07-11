@@ -154,6 +154,10 @@ apis:
       - type: OpenAPI
         url: https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/refs/heads/main/openapi/sap-fieldglass-business-analytics-openapi.json
 common:
+  - type: Authentication
+    url: authentication/sap-fieldglass-authentication.yml
+  - type: OAuthScopes
+    url: scopes/sap-fieldglass-scopes.yml
   - type: Website
     url: https://www.sap.com/products/hcm/contingent-workforce-management.html
   - type: Documentation
