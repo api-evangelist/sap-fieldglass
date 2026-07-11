@@ -1,0 +1,27 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/sap-fieldglass-approval-openapi.yaml, openapi/sap-fieldglass-audit-trail-openapi.json,
+  openapi/sap-fieldglass-background-check-openapi.json, openapi/sap-fieldglass-business-analytics-openapi.json,
+  openapi/sap-fieldglass-odata-analytic-openapi.json
+summary:
+  types:
+  - oauth2
+  oauth2_flows:
+  - clientCredentials
+schemes:
+- name: OAuth2
+  type: oauth2
+  flows:
+  - flow: clientCredentials
+    tokenUrl: ' '
+    scopes: 1
+  description: To use this REST API, you need to get OAuth client credentials (user credentials
+    and client-specific application key) from an SAP Fieldglass account representative. After
+    that, you need to pass the obtained client credentials to the SAP Fieldglass token endpoint
+    to obtain an access token.
+  sources:
+  - openapi/sap-fieldglass-approval-openapi.yaml
+  - openapi/sap-fieldglass-audit-trail-openapi.json
+  - openapi/sap-fieldglass-background-check-openapi.json
+  - openapi/sap-fieldglass-business-analytics-openapi.json
+  - openapi/sap-fieldglass-odata-analytic-openapi.json
