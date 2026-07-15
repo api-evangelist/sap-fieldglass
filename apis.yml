@@ -154,6 +154,8 @@ apis:
       - type: OpenAPI
         url: https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/refs/heads/main/openapi/sap-fieldglass-business-analytics-openapi.json
 common:
+  - type: AgenticAccess
+    url: agentic-access/sap-fieldglass-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/sap-fieldglass-vulnerability-disclosure.yml
   - type: DomainSecurity

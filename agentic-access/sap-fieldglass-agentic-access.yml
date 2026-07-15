@@ -1,0 +1,202 @@
+generated: '2026-07-15'
+method: generated
+source: openapi/sap-fieldglass-approval-openapi.yaml, openapi/sap-fieldglass-audit-trail-openapi.json,
+  openapi/sap-fieldglass-background-check-openapi.json, openapi/sap-fieldglass-business-analytics-openapi.json,
+  openapi/sap-fieldglass-odata-analytic-openapi.json
+description: Recommended x-agentic-access execution contracts, classified heuristically from
+  the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
+  audience per deployment. See research/curity/agentic-governance/.
+summary:
+  operations: 14
+  by_action_class:
+    connected: 11
+    acting: 3
+  by_consequence:
+    read: 11
+    write: 1
+    physical: 2
+  human_in_the_loop_required: 0
+operations:
+- path: /approvals
+  method: get
+  operationId: getItemListForApproval
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - user
+- path: /approvals/module_{moduleId}
+  method: get
+  operationId: getItemListFroApprovalByModule
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - user
+- path: /approvals/module_{moduleId}/{workItemId}/action/{action}
+  method: post
+  operationId: approveOrRejectItem
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - user
+- path: /approvals/module_{moduleId}/{workItemId}
+  method: get
+  operationId: getWorkItemDetail
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - user
+- path: /approvals/reject_reasons/module_{moduleId}
+  method: get
+  operationId: getRejectionReasons
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - user
+- path: /auditTrail
+  method: get
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - user
+- path: /order_confirmation
+  method: post
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - user
+- path: /result
+  method: post
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+    scope:
+    - user
+- path: /report
+  method: get
+  operationId: getReports
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    scope:
+    - user
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /report/{report_id}
+  method: get
+  operationId: getReportById
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    scope:
+    - user
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /Providers
+  method: get
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    scope:
+    - user
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /{ProviderID}/$metadata
+  method: get
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    scope:
+    - user
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /{ServiceURL}
+  method: get
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    scope:
+    - user
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /{ProviderID}/{entityName}
+  method: get
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+    scope:
+    - user
