@@ -4,7 +4,20 @@ description: >-
   SAP Fieldglass is a cloud-based vendor management system (VMS) that enables organizations to manage their contingent
   workforce, services procurement, and external talent. It provides REST APIs for managing work orders, job postings,
   statements of work, worker profiles, time sheets, invoices, and external talent across more than 165 countries.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: enterprise
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Enterprise · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sap-fieldglass.png
 url: https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
@@ -18,141 +31,291 @@ tags:
   - Vendor Management
   - Workforce Management
 apis:
-  - name: SAP Fieldglass REST API
-    description: >-
-      Core REST API for SAP Fieldglass that allows clients to send and receive integrated data directly against the
-      application. Supports upload (POST/PUT) and download (GET) of data in JSON and CSV formats for contingent
-      workforce and services procurement management.
-    humanURL: https://help.sap.com/docs/SAP_FIELDGLASS_INTEGRATION
-    baseURL: https://www.fieldglass.net/api
-    tags:
-      - Contingent Workforce
-      - Integration
-      - REST
-      - Work Orders
-    properties:
-      - type: Documentation
-        url: https://help.sap.com/doc/a5fdbd31ebe94832aef0eb79066a8087/cloud/en-US/SAPFieldglassRESTAPIIntegrationGeneralReferenceGuide.pdf
-      - type: Hub
-        url: https://api.sap.com/package/FieldglassAPI/rest
-      - type: Authentication
-        url: https://help.sap.com/docs/SAP_FIELDGLASS_INTEGRATION
-  - name: SAP Fieldglass Approval API
-    description: >-
-      Enables programmatic approval workflows for contingent workforce and services procurement documents including
-      work orders, statements of work, and time sheets within SAP Fieldglass.
-    humanURL: https://api.sap.com/api/approvals/overview
-    baseURL: https://www.fieldglass.net/api/approvals
-    tags:
-      - Approvals
-      - Workflows
-      - Work Orders
-    properties:
-      - type: Documentation
-        url: https://api.sap.com/api/approvals/overview
-      - type: Hub
-        url: https://api.sap.com/api/approvals/resource
-      - type: OpenAPI
-        url: https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/refs/heads/main/openapi/sap-fieldglass-approval-openapi.yaml
-  - name: SAP Fieldglass OData-Based Analytic API
-    description: >-
-      OData-based analytic API for SAP Fieldglass providing access to business analytics, reporting data, and
-      operational metrics for contingent workforce and services procurement management.
-    humanURL: https://api.sap.com/api/datahub/overview
-    baseURL: https://www.fieldglass.net/api/datahub
-    tags:
-      - Analytics
-      - Business Intelligence
-      - OData
-      - Reporting
-    properties:
-      - type: Documentation
-        url: https://api.sap.com/api/datahub/overview
-      - type: Hub
-        url: https://api.sap.com/api/datahub/resource
-      - type: Documentation
-        url: https://help.sap.com/doc/3921dd506108442f9ddc6350cb0628c3/cloud/en-US/SAPFieldglassBusinessAnalyticsAPISpecifications.pdf
-      - type: OpenAPI
-        url: https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/refs/heads/main/openapi/sap-fieldglass-odata-analytic-openapi.json
-  - name: SAP Fieldglass Identity Management API
-    description: >-
-      SCIM-based identity management API for SAP Fieldglass enabling user provisioning, deprovisioning, and lifecycle
-      management for workers, buyers, and suppliers across the contingent workforce platform.
-    humanURL: https://api.sap.com/api/scim/overview
-    baseURL: https://www.fieldglass.net/api/scim
-    tags:
-      - Identity Management
-      - Provisioning
-      - SCIM
-      - User Management
-    properties:
-      - type: Documentation
-        url: https://api.sap.com/api/scim/overview
-      - type: Hub
-        url: https://api.sap.com/package/FieldglassAPI/rest
-  - name: SAP Fieldglass Pick List Value Download API
-    description: >-
-      Retrieves configurable pick list values from SAP Fieldglass for use in integration and data validation,
-      including worker types, cost centers, regions, and other reference data.
-    humanURL: https://api.sap.com/api/pickListValueDownload/resource
-    baseURL: https://www.fieldglass.net/api/pickListValues
-    tags:
-      - Configuration
-      - Pick Lists
-      - Reference Data
-    properties:
-      - type: Documentation
-        url: https://api.sap.com/api/pickListValueDownload/resource
-      - type: Hub
-        url: https://api.sap.com/package/FieldglassAPI/rest
-  - name: SAP Fieldglass Background Check API
-    description: >-
-      Integrates background check services with SAP Fieldglass work orders, enabling posting of background check
-      results and status updates for contingent workers tied to specific work order IDs.
-    humanURL: https://help.sap.com/doc/7baf3b6dbe4d4495a0e2afa668c70a76/cloud/en-US/SAPFieldglassBackgroundCheckAPITechnicalSpecifications.pdf
-    baseURL: https://www.fieldglass.net/api/backgroundCheck
-    tags:
-      - Background Checks
-      - Compliance
-      - Work Orders
-      - Workers
-    properties:
-      - type: Documentation
-        url: https://help.sap.com/doc/7baf3b6dbe4d4495a0e2afa668c70a76/cloud/en-US/SAPFieldglassBackgroundCheckAPITechnicalSpecifications.pdf
-      - type: Hub
-        url: https://api.sap.com/package/FieldglassAPI/rest
-      - type: OpenAPI
-        url: https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/refs/heads/main/openapi/sap-fieldglass-background-check-openapi.json
-  - name: SAP Fieldglass Audit Trail API
-    description: >-
-      Provides access to the audit trail of changes and actions performed in SAP Fieldglass, enabling
-      compliance tracking, change history retrieval, and activity monitoring for contingent workforce records.
-    humanURL: https://api.sap.com/package/FieldglassAPI/rest
-    baseURL: https://www.fieldglass.net/api/auditTrail
-    tags:
-      - Audit
-      - Compliance
-      - Monitoring
-    properties:
-      - type: Hub
-        url: https://api.sap.com/package/FieldglassAPI/rest
-      - type: OpenAPI
-        url: https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/refs/heads/main/openapi/sap-fieldglass-audit-trail-openapi.json
-  - name: SAP Fieldglass Business Analytics API
-    description: >-
-      REST API for accessing SAP Fieldglass business analytics reports, providing structured reporting data
-      for spend, headcount, and operational metrics related to contingent workforce management.
-    humanURL: https://api.sap.com/package/FieldglassAPI/rest
-    baseURL: https://www.fieldglass.net/api/report
-    tags:
-      - Analytics
-      - Business Intelligence
-      - Reporting
-    properties:
-      - type: Hub
-        url: https://api.sap.com/package/FieldglassAPI/rest
-      - type: OpenAPI
-        url: https://raw.githubusercontent.com/api-evangelist/sap-fieldglass/refs/heads/main/openapi/sap-fieldglass-business-analytics-openapi.json
+- name: SAP Fieldglass REST API
+  description: >-
+    Core REST API for SAP Fieldglass that allows clients to send and receive integrated data directly
+    against the application. Supports upload (POST/PUT) and download (GET) of data in JSON and CSV formats
+    for contingent workforce and services procurement management.
+  humanURL: https://help.sap.com/docs/SAP_FIELDGLASS_INTEGRATION
+  baseURL: https://www.fieldglass.net/api
+  tags:
+  - Contingent Workforce
+  - Integration
+  - REST
+  - Work Orders
+  properties:
+  - type: Documentation
+    url: >-
+      https://help.sap.com/doc/a5fdbd31ebe94832aef0eb79066a8087/cloud/en-US/SAPFieldglassRESTAPIIntegrationGeneralReferenceGuide.pdf
+  - type: Hub
+    url: https://api.sap.com/package/FieldglassAPI/rest
+  - type: Authentication
+    url: https://help.sap.com/docs/SAP_FIELDGLASS_INTEGRATION
+- name: SAP Fieldglass Identity Management API
+  description: >-
+    SCIM-based identity management API for SAP Fieldglass enabling user provisioning, deprovisioning,
+    and lifecycle management for workers, buyers, and suppliers across the contingent workforce platform.
+  humanURL: https://api.sap.com/api/scim/overview
+  baseURL: https://www.fieldglass.net/api/scim
+  tags:
+  - Identity Management
+  - Provisioning
+  - SCIM
+  - User Management
+  properties:
+  - type: Documentation
+    url: https://api.sap.com/api/scim/overview
+  - type: Hub
+    url: https://api.sap.com/package/FieldglassAPI/rest
+- name: SAP Fieldglass Pick List Value Download API
+  description: >-
+    Retrieves configurable pick list values from SAP Fieldglass for use in integration and data validation,
+    including worker types, cost centers, regions, and other reference data.
+  humanURL: https://api.sap.com/api/pickListValueDownload/resource
+  baseURL: https://www.fieldglass.net/api/pickListValues
+  tags:
+  - Configuration
+  - Pick Lists
+  - Reference Data
+  properties:
+  - type: Documentation
+    url: https://api.sap.com/api/pickListValueDownload/resource
+  - type: Hub
+    url: https://api.sap.com/package/FieldglassAPI/rest
+- aid: sap-fieldglass:sap-fieldglass-approval-api
+  name: SAP Fieldglass Approval API
+  description: The Approval API from SAP Fieldglass — 5 operation(s) for approval.
+  humanURL: https://help.sap.com/docs/SAP_FIELDGLASS_INTEGRATION
+  baseURL: https://www.fieldglass.net/api
+  tags:
+  - Approval
+  properties:
+  - type: OpenAPI
+    url: openapi/sap-fieldglass-approval-api-openapi.yml
+  - type: Documentation
+    url: https://api.sap.com/api/approvals/overview
+  - type: Hub
+    url: https://api.sap.com/api/approvals/resource
+  - type: Documentation
+    url: https://api.sap.com/api/datahub/overview
+  - type: Hub
+    url: https://api.sap.com/api/datahub/resource
+  - type: Documentation
+    url: >-
+      https://help.sap.com/doc/3921dd506108442f9ddc6350cb0628c3/cloud/en-US/SAPFieldglassBusinessAnalyticsAPISpecifications.pdf
+  - type: Documentation
+    url: >-
+      https://help.sap.com/doc/7baf3b6dbe4d4495a0e2afa668c70a76/cloud/en-US/SAPFieldglassBackgroundCheckAPITechnicalSpecifications.pdf
+  - type: Hub
+    url: https://api.sap.com/package/FieldglassAPI/rest
+- aid: sap-fieldglass:sap-fieldglass-audit-trail-api
+  name: SAP Fieldglass Audit Trail API
+  description: The Audit Trail API from SAP Fieldglass — 1 operation(s) for audit trail.
+  humanURL: https://help.sap.com/docs/SAP_FIELDGLASS_INTEGRATION
+  baseURL: https://www.fieldglass.net/api
+  tags:
+  - Audit Trail
+  properties:
+  - type: OpenAPI
+    url: openapi/sap-fieldglass-audit-trail-api-openapi.yml
+  - type: Documentation
+    url: https://api.sap.com/api/approvals/overview
+  - type: Hub
+    url: https://api.sap.com/api/approvals/resource
+  - type: Documentation
+    url: https://api.sap.com/api/datahub/overview
+  - type: Hub
+    url: https://api.sap.com/api/datahub/resource
+  - type: Documentation
+    url: >-
+      https://help.sap.com/doc/3921dd506108442f9ddc6350cb0628c3/cloud/en-US/SAPFieldglassBusinessAnalyticsAPISpecifications.pdf
+  - type: Documentation
+    url: >-
+      https://help.sap.com/doc/7baf3b6dbe4d4495a0e2afa668c70a76/cloud/en-US/SAPFieldglassBackgroundCheckAPITechnicalSpecifications.pdf
+  - type: Hub
+    url: https://api.sap.com/package/FieldglassAPI/rest
+- aid: sap-fieldglass:sap-fieldglass-get-data-api
+  name: SAP Fieldglass Get Data API
+  description: The Get Data API from SAP Fieldglass — 1 operation(s) for get data.
+  humanURL: https://help.sap.com/docs/SAP_FIELDGLASS_INTEGRATION
+  baseURL: https://www.fieldglass.net/api
+  tags:
+  - Get Data
+  properties:
+  - type: OpenAPI
+    url: openapi/sap-fieldglass-get-data-api-openapi.yml
+  - type: Documentation
+    url: https://api.sap.com/api/approvals/overview
+  - type: Hub
+    url: https://api.sap.com/api/approvals/resource
+  - type: Documentation
+    url: https://api.sap.com/api/datahub/overview
+  - type: Hub
+    url: https://api.sap.com/api/datahub/resource
+  - type: Documentation
+    url: >-
+      https://help.sap.com/doc/3921dd506108442f9ddc6350cb0628c3/cloud/en-US/SAPFieldglassBusinessAnalyticsAPISpecifications.pdf
+  - type: Documentation
+    url: >-
+      https://help.sap.com/doc/7baf3b6dbe4d4495a0e2afa668c70a76/cloud/en-US/SAPFieldglassBackgroundCheckAPITechnicalSpecifications.pdf
+  - type: Hub
+    url: https://api.sap.com/package/FieldglassAPI/rest
+- aid: sap-fieldglass:sap-fieldglass-get-entities-api
+  name: SAP Fieldglass Get Entities API
+  description: The Get Entities API from SAP Fieldglass — 1 operation(s) for get entities.
+  humanURL: https://help.sap.com/docs/SAP_FIELDGLASS_INTEGRATION
+  baseURL: https://www.fieldglass.net/api
+  tags:
+  - Get Entities
+  properties:
+  - type: OpenAPI
+    url: openapi/sap-fieldglass-get-entities-api-openapi.yml
+  - type: Documentation
+    url: https://api.sap.com/api/approvals/overview
+  - type: Hub
+    url: https://api.sap.com/api/approvals/resource
+  - type: Documentation
+    url: https://api.sap.com/api/datahub/overview
+  - type: Hub
+    url: https://api.sap.com/api/datahub/resource
+  - type: Documentation
+    url: >-
+      https://help.sap.com/doc/3921dd506108442f9ddc6350cb0628c3/cloud/en-US/SAPFieldglassBusinessAnalyticsAPISpecifications.pdf
+  - type: Documentation
+    url: >-
+      https://help.sap.com/doc/7baf3b6dbe4d4495a0e2afa668c70a76/cloud/en-US/SAPFieldglassBackgroundCheckAPITechnicalSpecifications.pdf
+  - type: Hub
+    url: https://api.sap.com/package/FieldglassAPI/rest
+- aid: sap-fieldglass:sap-fieldglass-get-metadata-api
+  name: SAP Fieldglass Get Metadata API
+  description: The Get Metadata API from SAP Fieldglass — 1 operation(s) for get metadata.
+  humanURL: https://help.sap.com/docs/SAP_FIELDGLASS_INTEGRATION
+  baseURL: https://www.fieldglass.net/api
+  tags:
+  - Get Metadata
+  properties:
+  - type: OpenAPI
+    url: openapi/sap-fieldglass-get-metadata-api-openapi.yml
+  - type: Documentation
+    url: https://api.sap.com/api/approvals/overview
+  - type: Hub
+    url: https://api.sap.com/api/approvals/resource
+  - type: Documentation
+    url: https://api.sap.com/api/datahub/overview
+  - type: Hub
+    url: https://api.sap.com/api/datahub/resource
+  - type: Documentation
+    url: >-
+      https://help.sap.com/doc/3921dd506108442f9ddc6350cb0628c3/cloud/en-US/SAPFieldglassBusinessAnalyticsAPISpecifications.pdf
+  - type: Documentation
+    url: >-
+      https://help.sap.com/doc/7baf3b6dbe4d4495a0e2afa668c70a76/cloud/en-US/SAPFieldglassBackgroundCheckAPITechnicalSpecifications.pdf
+  - type: Hub
+    url: https://api.sap.com/package/FieldglassAPI/rest
+- aid: sap-fieldglass:sap-fieldglass-get-providers-api
+  name: SAP Fieldglass Get Providers API
+  description: The Get Providers API from SAP Fieldglass — 1 operation(s) for get providers.
+  humanURL: https://help.sap.com/docs/SAP_FIELDGLASS_INTEGRATION
+  baseURL: https://www.fieldglass.net/api
+  tags:
+  - Get Providers
+  properties:
+  - type: OpenAPI
+    url: openapi/sap-fieldglass-get-providers-api-openapi.yml
+  - type: Documentation
+    url: https://api.sap.com/api/approvals/overview
+  - type: Hub
+    url: https://api.sap.com/api/approvals/resource
+  - type: Documentation
+    url: https://api.sap.com/api/datahub/overview
+  - type: Hub
+    url: https://api.sap.com/api/datahub/resource
+  - type: Documentation
+    url: >-
+      https://help.sap.com/doc/3921dd506108442f9ddc6350cb0628c3/cloud/en-US/SAPFieldglassBusinessAnalyticsAPISpecifications.pdf
+  - type: Documentation
+    url: >-
+      https://help.sap.com/doc/7baf3b6dbe4d4495a0e2afa668c70a76/cloud/en-US/SAPFieldglassBackgroundCheckAPITechnicalSpecifications.pdf
+  - type: Hub
+    url: https://api.sap.com/package/FieldglassAPI/rest
+- aid: sap-fieldglass:sap-fieldglass-order-confirmation-api
+  name: SAP Fieldglass Order Confirmation API
+  description: The Order Confirmation API from SAP Fieldglass — 1 operation(s) for order confirmation.
+  humanURL: https://help.sap.com/docs/SAP_FIELDGLASS_INTEGRATION
+  baseURL: https://www.fieldglass.net/api
+  tags:
+  - Order Confirmation
+  properties:
+  - type: OpenAPI
+    url: openapi/sap-fieldglass-order-confirmation-api-openapi.yml
+  - type: Documentation
+    url: https://api.sap.com/api/approvals/overview
+  - type: Hub
+    url: https://api.sap.com/api/approvals/resource
+  - type: Documentation
+    url: https://api.sap.com/api/datahub/overview
+  - type: Hub
+    url: https://api.sap.com/api/datahub/resource
+  - type: Documentation
+    url: >-
+      https://help.sap.com/doc/3921dd506108442f9ddc6350cb0628c3/cloud/en-US/SAPFieldglassBusinessAnalyticsAPISpecifications.pdf
+  - type: Documentation
+    url: >-
+      https://help.sap.com/doc/7baf3b6dbe4d4495a0e2afa668c70a76/cloud/en-US/SAPFieldglassBackgroundCheckAPITechnicalSpecifications.pdf
+  - type: Hub
+    url: https://api.sap.com/package/FieldglassAPI/rest
+- aid: sap-fieldglass:sap-fieldglass-reports-api
+  name: SAP Fieldglass Reports API
+  description: The Reports API from SAP Fieldglass — 2 operation(s) for reports.
+  humanURL: https://help.sap.com/docs/SAP_FIELDGLASS_INTEGRATION
+  baseURL: https://www.fieldglass.net/api
+  tags:
+  - Reports
+  properties:
+  - type: OpenAPI
+    url: openapi/sap-fieldglass-reports-api-openapi.yml
+  - type: Documentation
+    url: https://api.sap.com/api/approvals/overview
+  - type: Hub
+    url: https://api.sap.com/api/approvals/resource
+  - type: Documentation
+    url: https://api.sap.com/api/datahub/overview
+  - type: Hub
+    url: https://api.sap.com/api/datahub/resource
+  - type: Documentation
+    url: >-
+      https://help.sap.com/doc/3921dd506108442f9ddc6350cb0628c3/cloud/en-US/SAPFieldglassBusinessAnalyticsAPISpecifications.pdf
+  - type: Documentation
+    url: >-
+      https://help.sap.com/doc/7baf3b6dbe4d4495a0e2afa668c70a76/cloud/en-US/SAPFieldglassBackgroundCheckAPITechnicalSpecifications.pdf
+  - type: Hub
+    url: https://api.sap.com/package/FieldglassAPI/rest
+- aid: sap-fieldglass:sap-fieldglass-results-api
+  name: SAP Fieldglass Results API
+  description: The Results API from SAP Fieldglass — 1 operation(s) for results.
+  humanURL: https://help.sap.com/docs/SAP_FIELDGLASS_INTEGRATION
+  baseURL: https://www.fieldglass.net/api
+  tags:
+  - Results
+  properties:
+  - type: OpenAPI
+    url: openapi/sap-fieldglass-results-api-openapi.yml
+  - type: Documentation
+    url: https://api.sap.com/api/approvals/overview
+  - type: Hub
+    url: https://api.sap.com/api/approvals/resource
+  - type: Documentation
+    url: https://api.sap.com/api/datahub/overview
+  - type: Hub
+    url: https://api.sap.com/api/datahub/resource
+  - type: Documentation
+    url: >-
+      https://help.sap.com/doc/3921dd506108442f9ddc6350cb0628c3/cloud/en-US/SAPFieldglassBusinessAnalyticsAPISpecifications.pdf
+  - type: Documentation
+    url: >-
+      https://help.sap.com/doc/7baf3b6dbe4d4495a0e2afa668c70a76/cloud/en-US/SAPFieldglassBackgroundCheckAPITechnicalSpecifications.pdf
+  - type: Hub
+    url: https://api.sap.com/package/FieldglassAPI/rest
 common:
   - type: AgenticAccess
     url: agentic-access/sap-fieldglass-agentic-access.yml
