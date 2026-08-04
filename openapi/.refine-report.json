@@ -1,0 +1,30 @@
+{
+  "provider": "sap-fieldglass",
+  "sources": [
+    "sap-fieldglass-approval-api-openapi.yml",
+    "sap-fieldglass-audit-trail-api-openapi.yml",
+    "sap-fieldglass-get-data-api-openapi.yml",
+    "sap-fieldglass-get-entities-api-openapi.yml",
+    "sap-fieldglass-get-metadata-api-openapi.yml",
+    "sap-fieldglass-get-providers-api-openapi.yml",
+    "sap-fieldglass-order-confirmation-api-openapi.yml",
+    "sap-fieldglass-reports-api-openapi.yml",
+    "sap-fieldglass-results-api-openapi.yml"
+  ],
+  "outputs": [
+    "sap-fieldglass-approval-api-openapi.yml",
+    "sap-fieldglass-audit-trail-api-openapi.yml",
+    "sap-fieldglass-get-data-api-openapi.yml",
+    "sap-fieldglass-get-entities-api-openapi.yml",
+    "sap-fieldglass-get-metadata-api-openapi.yml",
+    "sap-fieldglass-get-providers-api-openapi.yml",
+    "sap-fieldglass-order-confirmation-api-openapi.yml",
+    "sap-fieldglass-reports-api-openapi.yml",
+    "sap-fieldglass-results-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
