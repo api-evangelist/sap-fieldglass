@@ -1,0 +1,299 @@
+{
+  "item": [
+    {
+      "id": "786908dc-c86e-4450-85ff-70b6ab500873",
+      "name": "Audit Trail",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f3b31567-ec75-4859-ab5b-38e27068b881",
+          "name": "Get audit trail details",
+          "request": {
+            "name": "Get audit trail details",
+            "description": {
+              "content": "Returns audit trail details. When using this with query parameter pairs for start and stop times, you can limit the results to a particular timeframe.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "auditTrail"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "description": {
+                    "content": "Transaction ID for transmission.",
+                    "type": "text/plain"
+                  },
+                  "key": "TransactionId",
+                  "value": ""
+                },
+                {
+                  "description": {
+                    "content": "Start time of the integration. Pair this with PriorStopTime.",
+                    "type": "text/plain"
+                  },
+                  "key": "PriorStartTime",
+                  "value": ""
+                },
+                {
+                  "description": {
+                    "content": "Start time of the integration. Pair this with CurrentStopTime.",
+                    "type": "text/plain"
+                  },
+                  "key": "CurrentStartTime",
+                  "value": ""
+                },
+                {
+                  "description": {
+                    "content": "Stop time of the integration. Pair this with PriorStartTime.",
+                    "type": "text/plain"
+                  },
+                  "key": "PriorStopTime",
+                  "value": ""
+                },
+                {
+                  "description": {
+                    "content": "Stop time of the integration. Pair this with CurrentStartTime.",
+                    "type": "text/plain"
+                  },
+                  "key": "CurrentStopTime",
+                  "value": ""
+                },
+                {
+                  "description": {
+                    "content": "Error / OK status tied to the integration process to be filtered on.",
+                    "type": "text/plain"
+                  },
+                  "key": "Status",
+                  "value": ""
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "The company-specific key provided by SAP Fieldglass for API access. This is required for production access.",
+                "key": "X-ApplicationKey",
+                "value": ""
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "50eb3f79-eea0-4be9-8a9c-984a10a80e5f",
+              "name": "OK. The request was received successfully.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "auditTrail"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "TransactionId",
+                      "value": ""
+                    },
+                    {
+                      "key": "PriorStartTime",
+                      "value": ""
+                    },
+                    {
+                      "key": "CurrentStartTime",
+                      "value": ""
+                    },
+                    {
+                      "key": "PriorStopTime",
+                      "value": ""
+                    },
+                    {
+                      "key": "CurrentStopTime",
+                      "value": ""
+                    },
+                    {
+                      "key": "Status",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Only required for production access when using SAP Fieldglass.",
+                    "key": "Authorization",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "The company-specific key provided by SAP Fieldglass for API access. This is required for production access.",
+                    "key": "X-ApplicationKey",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "This value is required in production and must be application/x-www-form-urlencoded.",
+                    "key": "Content-Type",
+                    "value": ""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2cd8abea-71dd-4c6f-8035-c8567adab08d",
+              "name": "No Result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "auditTrail"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "TransactionId",
+                      "value": ""
+                    },
+                    {
+                      "key": "PriorStartTime",
+                      "value": ""
+                    },
+                    {
+                      "key": "CurrentStartTime",
+                      "value": ""
+                    },
+                    {
+                      "key": "PriorStopTime",
+                      "value": ""
+                    },
+                    {
+                      "key": "CurrentStopTime",
+                      "value": ""
+                    },
+                    {
+                      "key": "Status",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Only required for production access when using SAP Fieldglass.",
+                    "key": "Authorization",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "The company-specific key provided by SAP Fieldglass for API access. This is required for production access.",
+                    "key": "X-ApplicationKey",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "This value is required in production and must be application/x-www-form-urlencoded.",
+                    "key": "Content-Type",
+                    "value": ""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "user"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": " "
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "8c0bceb8-8860-42f8-8265-6604b23ef290",
+    "name": "Approval Audit Trail API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "This is a generated connector for [SAP Fieldglass Approval API API v1.0.0](https://api.sap.com/api/approvals/resource) OpenAPI specification. \nThe SAP Fieldglass Approval API allows clients to approve or reject SAP Fieldglass work items. Clients retrieve the work items pending an approval action from the authenticated user and return the workflow action to be performed (either approve or reject). The list and details provided by the SAP Fieldglass API give clients the ability to present work items for approval to their users with the level of detail needed to make an informed approval decision and the mechanism to return the approval or rejection decision.\n\nContact Support:\n Name: SAP Fieldglass Approval API\n Email: Fieldglass_API@sap.com",
+      "type": "text/plain"
+    }
+  }
+}

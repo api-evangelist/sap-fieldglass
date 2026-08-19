@@ -1,0 +1,54 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Approval Order Confirmation API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": " ",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Order Confirmation",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Provides confirmation of a background check request",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/order_confirmation",
+            "headers": [
+              {
+                "name": "Authorization",
+                "value": ""
+              },
+              {
+                "name": "Content-Type",
+                "value": ""
+              },
+              {
+                "name": "X-ApplicationKey",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Posts a background check request acknowledgment to SAP Fieldglass."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

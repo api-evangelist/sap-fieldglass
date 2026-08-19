@@ -1,0 +1,281 @@
+{
+  "item": [
+    {
+      "id": "5bb24a34-8443-419d-8a5f-98854e770481",
+      "name": "Results",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "34bacfe1-077f-4a3e-bc10-1ec8c3a3d195",
+          "name": "Provides results for the work order",
+          "request": {
+            "name": "Provides results for the work order",
+            "description": {
+              "content": "Posts results for a specific background check request.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "result"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "description": {
+                    "content": "(Required) Globally-unique SAP Fieldglass identifier of the object. This is the Work Order ID used for the drill-down call in SAP Fieldglass. It is not visible to end users.",
+                    "type": "text/plain"
+                  },
+                  "key": "clientReferenceId",
+                  "value": ""
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "The company-specific key provided by SAP Fieldglass for API access.",
+                "key": "X-ApplicationKey",
+                "value": ""
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "06b09f1a-8b6b-48f0-89d8-3573473b7b6b",
+              "name": "Order Result POST successful",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "result"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "clientReferenceId",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Only required for production access when using SAP Fieldglass.",
+                    "key": "Authorization",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "JSON format is supported. This value is application/json.",
+                    "key": "Content-Type",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "The company-specific key provided by SAP Fieldglass for API access.",
+                    "key": "X-ApplicationKey",
+                    "value": ""
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f67489ba-321a-4322-8f7b-4e7f815a9d1e",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "result"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "clientReferenceId",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Only required for production access when using SAP Fieldglass.",
+                    "key": "Authorization",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "JSON format is supported. This value is application/json.",
+                    "key": "Content-Type",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "The company-specific key provided by SAP Fieldglass for API access.",
+                    "key": "X-ApplicationKey",
+                    "value": ""
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "93a7c168-34a5-4cef-8239-b1540974771f",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "result"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "clientReferenceId",
+                      "value": ""
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Only required for production access when using SAP Fieldglass.",
+                    "key": "Authorization",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "JSON format is supported. This value is application/json.",
+                    "key": "Content-Type",
+                    "value": ""
+                  },
+                  {
+                    "disabled": false,
+                    "description": "The company-specific key provided by SAP Fieldglass for API access.",
+                    "key": "X-ApplicationKey",
+                    "value": ""
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "user"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": " "
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "8878821b-7d83-4300-9038-1c2db99ee875",
+    "name": "Approval Results API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "This is a generated connector for [SAP Fieldglass Approval API API v1.0.0](https://api.sap.com/api/approvals/resource) OpenAPI specification. \nThe SAP Fieldglass Approval API allows clients to approve or reject SAP Fieldglass work items. Clients retrieve the work items pending an approval action from the authenticated user and return the workflow action to be performed (either approve or reject). The list and details provided by the SAP Fieldglass API give clients the ability to present work items for approval to their users with the level of detail needed to make an informed approval decision and the mechanism to return the approval or rejection decision.\n\nContact Support:\n Name: SAP Fieldglass Approval API\n Email: Fieldglass_API@sap.com",
+      "type": "text/plain"
+    }
+  }
+}

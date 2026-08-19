@@ -1,0 +1,106 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Approval Get Data API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": " ",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get Data",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get data for an entity.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/:ProviderID/:entityName",
+            "headers": [
+              {
+                "name": "Authorization",
+                "value": ""
+              },
+              {
+                "name": "X-ApplicationKey",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "ProviderID",
+                "value": "",
+                "type": "path",
+                "description": "The ID for the entity (in this case, the report)."
+              },
+              {
+                "name": "entityName",
+                "value": "",
+                "type": "path",
+                "description": "The name of the entity (report). It can be obtained via the GET /{ServiceURL} operation."
+              },
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query",
+                "description": "Limits the number of items returned, up to but not exceeding the number specified. For more information, see [OData Paging - Top](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html#_Toc445374630)."
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query",
+                "description": "Excludes the number of items specified from the collection. For more information, see [OData Paging - Skip](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html#_Toc445374631)."
+              },
+              {
+                "name": "$filter",
+                "value": "",
+                "type": "query",
+                "description": "Restricts the items returned by property values. For more information, see see [OData Filtering](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html#_Toc445374625)."
+              },
+              {
+                "name": "$orderby",
+                "value": "",
+                "type": "query",
+                "description": "The property or properties used to order the results. If there is more than one, separate using a comma. You can also specify asc for ascending and desc for descending order. For more information, see [OData Sorting](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html#_Toc445374629)."
+              },
+              {
+                "name": "$select",
+                "value": "",
+                "type": "query",
+                "description": "Provide a comma-separated list of the properties to be returned. For more information, see [OData Select](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html#_Toc445374620)."
+              },
+              {
+                "name": "packageSize",
+                "value": "",
+                "type": "query",
+                "description": "Provide the number of rows returned per page."
+              },
+              {
+                "name": "pageNum",
+                "value": "",
+                "type": "query",
+                "description": "Where returned data spans multiple pages, specify the number of the page to return."
+              }
+            ]
+          },
+          "docs": "Returns data for the specified ProviderID and entity."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

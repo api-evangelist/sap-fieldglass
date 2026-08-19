@@ -1,0 +1,196 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Approval API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": " ",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Approval",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get a list of items that require approval",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/approvals",
+            "headers": [
+              {
+                "name": "Authorization",
+                "value": ""
+              },
+              {
+                "name": "X-ApplicationKey",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Returns a list of work items requiring approval action."
+        },
+        {
+          "info": {
+            "name": "Get items that require approval for a module",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/approvals/module_:moduleId",
+            "headers": [
+              {
+                "name": "Authorization",
+                "value": ""
+              },
+              {
+                "name": "X-ApplicationKey",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "moduleId",
+                "value": "",
+                "type": "path",
+                "description": "The ID for the module (for example, 40 for Job Posting or 270 for Work Order). A full list can be found in the supporting documentation."
+              }
+            ]
+          },
+          "docs": "Returns a list of work items requiring approval action, filtered down to a specific module."
+        },
+        {
+          "info": {
+            "name": "Approve or reject an item",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/approvals/module_:moduleId/:workItemId/action/:action",
+            "headers": [
+              {
+                "name": "Authorization",
+                "value": ""
+              },
+              {
+                "name": "X-ApplicationKey",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "moduleId",
+                "value": "",
+                "type": "path",
+                "description": "The ID for the module (for example, 40 for Job Posting or 270 for Work Order). A full list can be found in the supporting documentation."
+              },
+              {
+                "name": "workItemId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the work item. You can get this from the response received when getting the list of items that require approval."
+              },
+              {
+                "name": "action",
+                "value": "",
+                "type": "path",
+                "description": "The action to take on the work item. This can be either ''approve'' or ''reject''. If it is reject, the reasonId is required."
+              },
+              {
+                "name": "comments",
+                "value": "",
+                "type": "query",
+                "description": "Any comments about the action."
+              },
+              {
+                "name": "reasonId",
+                "value": "",
+                "type": "query",
+                "description": "The reasonId for the rejection. This is required when the action is 'reject'. You can get a list of rejection reasons available for the module from the response when getting rejection reasons."
+              }
+            ]
+          },
+          "docs": "Take action on the work item by either approving or rejecting it."
+        },
+        {
+          "info": {
+            "name": "Get details for work item",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/approvals/module_:moduleId/:workItemId",
+            "headers": [
+              {
+                "name": "Authorization",
+                "value": ""
+              },
+              {
+                "name": "X-ApplicationKey",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "moduleId",
+                "value": "",
+                "type": "path",
+                "description": "The ID for the module (for example, 40 for Job Posting or 270 for Work Order). A full list can be found in the supporting documentation."
+              },
+              {
+                "name": "workItemId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the work item."
+              }
+            ]
+          },
+          "docs": "Returns details for a specific work item."
+        },
+        {
+          "info": {
+            "name": "Get rejection reasons",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/approvals/reject_reasons/module_:moduleId",
+            "headers": [
+              {
+                "name": "Authorization",
+                "value": ""
+              },
+              {
+                "name": "X-ApplicationKey",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "moduleId",
+                "value": "",
+                "type": "path",
+                "description": "The ID for the module (for example, 40 for Job Posting or 270 for Work Order). A full list can be found in the supporting documentation."
+              }
+            ]
+          },
+          "docs": "Returns all configured work item rejection reasons by module."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

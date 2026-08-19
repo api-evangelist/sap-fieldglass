@@ -1,0 +1,92 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Approval Audit Trail API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": " ",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Audit Trail",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get audit trail details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/auditTrail",
+            "headers": [
+              {
+                "name": "Authorization",
+                "value": ""
+              },
+              {
+                "name": "X-ApplicationKey",
+                "value": ""
+              },
+              {
+                "name": "Content-Type",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "TransactionId",
+                "value": "",
+                "type": "query",
+                "description": "Transaction ID for transmission."
+              },
+              {
+                "name": "PriorStartTime",
+                "value": "",
+                "type": "query",
+                "description": "Start time of the integration. Pair this with PriorStopTime."
+              },
+              {
+                "name": "CurrentStartTime",
+                "value": "",
+                "type": "query",
+                "description": "Start time of the integration. Pair this with CurrentStopTime."
+              },
+              {
+                "name": "PriorStopTime",
+                "value": "",
+                "type": "query",
+                "description": "Stop time of the integration. Pair this with PriorStartTime."
+              },
+              {
+                "name": "CurrentStopTime",
+                "value": "",
+                "type": "query",
+                "description": "Stop time of the integration. Pair this with CurrentStartTime."
+              },
+              {
+                "name": "Status",
+                "value": "",
+                "type": "query",
+                "description": "Error / OK status tied to the integration process to be filtered on."
+              }
+            ]
+          },
+          "docs": "Returns audit trail details. When using this with query parameter pairs for start and stop times, you can limit the results to a particular timeframe."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

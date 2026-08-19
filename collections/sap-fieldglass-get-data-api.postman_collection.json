@@ -1,0 +1,631 @@
+{
+  "item": [
+    {
+      "id": "fb54c5b9-f993-4c97-9da9-61ad5a480f0f",
+      "name": "Get Data",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6061635c-46f0-4d47-8c45-4b1b5c6a6955",
+          "name": "Get data for an entity.",
+          "request": {
+            "name": "Get data for an entity.",
+            "description": {
+              "content": "Returns data for the specified ProviderID and entity.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ":ProviderID",
+                ":entityName"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "description": {
+                    "content": "The property or properties used to order the results. If there is more than one, separate using a comma. You can also specify asc for ascending and desc for descending order. For more information, see [OData Sorting](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html#_Toc445374629).",
+                    "type": "text/plain"
+                  },
+                  "key": "$orderby",
+                  "value": ""
+                },
+                {
+                  "description": {
+                    "content": "Provide a comma-separated list of the properties to be returned. For more information, see [OData Select](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html#_Toc445374620).",
+                    "type": "text/plain"
+                  },
+                  "key": "$select",
+                  "value": ""
+                },
+                {
+                  "description": {
+                    "content": "Provide the number of rows returned per page.",
+                    "type": "text/plain"
+                  },
+                  "key": "packageSize",
+                  "value": ""
+                },
+                {
+                  "description": {
+                    "content": "Where returned data spans multiple pages, specify the number of the page to return.",
+                    "type": "text/plain"
+                  },
+                  "key": "pageNum",
+                  "value": ""
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "",
+                  "key": "ProviderID",
+                  "description": "(Required) The ID for the entity (in this case, the report)."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "",
+                  "key": "entityName",
+                  "description": "(Required) The name of the entity (report). It can be obtained via the GET /{ServiceURL} operation."
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d3b3769f-d181-4358-844a-13e20838cef6",
+              "name": "Data for the given entity, returned as a JSON schema.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":ProviderID",
+                    ":entityName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$orderby",
+                      "value": ""
+                    },
+                    {
+                      "key": "$select",
+                      "value": ""
+                    },
+                    {
+                      "key": "packageSize",
+                      "value": ""
+                    },
+                    {
+                      "key": "pageNum",
+                      "value": ""
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "",
+                      "key": "ProviderID",
+                      "description": "(Required) The ID for the entity (in this case, the report)."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "",
+                      "key": "entityName",
+                      "description": "(Required) The name of the entity (report). It can be obtained via the GET /{ServiceURL} operation."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2ba084c4-78b5-4795-bf8d-200e9e1ba2f2",
+              "name": "Bad Request. This response is returned if the specified URL is invalid, the request is not formatted correctly, or if the request is missing a required field.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":ProviderID",
+                    ":entityName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$orderby",
+                      "value": ""
+                    },
+                    {
+                      "key": "$select",
+                      "value": ""
+                    },
+                    {
+                      "key": "packageSize",
+                      "value": ""
+                    },
+                    {
+                      "key": "pageNum",
+                      "value": ""
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "",
+                      "key": "ProviderID",
+                      "description": "(Required) The ID for the entity (in this case, the report)."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "",
+                      "key": "entityName",
+                      "description": "(Required) The name of the entity (report). It can be obtained via the GET /{ServiceURL} operation."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "511e1d8f-6ea1-4ecb-a4da-7899383d40fa",
+              "name": "Unauthorized. User/password or application key is not verified.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":ProviderID",
+                    ":entityName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$orderby",
+                      "value": ""
+                    },
+                    {
+                      "key": "$select",
+                      "value": ""
+                    },
+                    {
+                      "key": "packageSize",
+                      "value": ""
+                    },
+                    {
+                      "key": "pageNum",
+                      "value": ""
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "",
+                      "key": "ProviderID",
+                      "description": "(Required) The ID for the entity (in this case, the report)."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "",
+                      "key": "entityName",
+                      "description": "(Required) The name of the entity (report). It can be obtained via the GET /{ServiceURL} operation."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "28327ff7-d94d-4982-a32d-4e06c80169d8",
+              "name": "Forbidden. Token is not verified.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":ProviderID",
+                    ":entityName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$orderby",
+                      "value": ""
+                    },
+                    {
+                      "key": "$select",
+                      "value": ""
+                    },
+                    {
+                      "key": "packageSize",
+                      "value": ""
+                    },
+                    {
+                      "key": "pageNum",
+                      "value": ""
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "",
+                      "key": "ProviderID",
+                      "description": "(Required) The ID for the entity (in this case, the report)."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "",
+                      "key": "entityName",
+                      "description": "(Required) The name of the entity (report). It can be obtained via the GET /{ServiceURL} operation."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "3e3adf65-2178-4283-882a-f984b41e9079",
+              "name": "Not Found. Service being requested does not exist.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":ProviderID",
+                    ":entityName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$orderby",
+                      "value": ""
+                    },
+                    {
+                      "key": "$select",
+                      "value": ""
+                    },
+                    {
+                      "key": "packageSize",
+                      "value": ""
+                    },
+                    {
+                      "key": "pageNum",
+                      "value": ""
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "",
+                      "key": "ProviderID",
+                      "description": "(Required) The ID for the entity (in this case, the report)."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "",
+                      "key": "entityName",
+                      "description": "(Required) The name of the entity (report). It can be obtained via the GET /{ServiceURL} operation."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "0db5976a-0bb4-4b66-b18d-9babf2e729f2",
+              "name": "Internal Server Error. Server is not available.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":ProviderID",
+                    ":entityName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$orderby",
+                      "value": ""
+                    },
+                    {
+                      "key": "$select",
+                      "value": ""
+                    },
+                    {
+                      "key": "packageSize",
+                      "value": ""
+                    },
+                    {
+                      "key": "pageNum",
+                      "value": ""
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "",
+                      "key": "ProviderID",
+                      "description": "(Required) The ID for the entity (in this case, the report)."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "",
+                      "key": "entityName",
+                      "description": "(Required) The name of the entity (report). It can be obtained via the GET /{ServiceURL} operation."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d5bc8c7a-f643-462b-a305-e9cf7f7cb372",
+              "name": "Internal Server Error. Server is not available.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":ProviderID",
+                    ":entityName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "$orderby",
+                      "value": ""
+                    },
+                    {
+                      "key": "$select",
+                      "value": ""
+                    },
+                    {
+                      "key": "packageSize",
+                      "value": ""
+                    },
+                    {
+                      "key": "pageNum",
+                      "value": ""
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "",
+                      "key": "ProviderID",
+                      "description": "(Required) The ID for the entity (in this case, the report)."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "",
+                      "key": "entityName",
+                      "description": "(Required) The name of the entity (report). It can be obtained via the GET /{ServiceURL} operation."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Service Unavailable",
+              "code": 503,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "user"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": " "
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "71e82f01-873e-423c-8089-a0b05a573bc9",
+    "name": "Approval Get Data API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "This is a generated connector for [SAP Fieldglass Approval API API v1.0.0](https://api.sap.com/api/approvals/resource) OpenAPI specification. \nThe SAP Fieldglass Approval API allows clients to approve or reject SAP Fieldglass work items. Clients retrieve the work items pending an approval action from the authenticated user and return the workflow action to be performed (either approve or reject). The list and details provided by the SAP Fieldglass API give clients the ability to present work items for approval to their users with the level of detail needed to make an informed approval decision and the mechanism to return the approval or rejection decision.\n\nContact Support:\n Name: SAP Fieldglass Approval API\n Email: Fieldglass_API@sap.com",
+      "type": "text/plain"
+    }
+  }
+}
