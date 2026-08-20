@@ -25,6 +25,14 @@ specificationVersion: '0.23'
 tags:
   - Contingent Workforce
   - External Talent
+  - HCM
+  - Services Procurement
+  - Statements of Work
+  - Vendor Management
+  - Workforce Management
+tags_raw:
+  - Contingent Workforce
+  - External Talent
   - Human Capital Management
   - Services Procurement
   - Statements of Work
@@ -74,6 +82,10 @@ apis:
   humanURL: https://api.sap.com/api/pickListValueDownload/resource
   baseURL: https://www.fieldglass.net/api/pickListValues
   tags:
+  - Configuration
+  - Picklists
+  - Reference Data
+  tags_raw:
   - Configuration
   - Pick Lists
   - Reference Data
