@@ -91,7 +91,7 @@ apis:
   baseURL: https://www.fieldglass.net/api/pickListValues
   tags:
   - Configuration
-  - Picklists
+  - Pick Lists
   - Reference Data
   tags_raw:
   - Configuration
