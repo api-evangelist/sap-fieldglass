@@ -1,7 +1,7 @@
-openapi: 3.0.1
+openapi: 3.2.0
 info:
   title: Approval API
-  description: "This is a generated connector for [SAP Fieldglass Approval API API v1.0.0](https://api.sap.com/api/approvals/resource) OpenAPI specification. \nThe SAP Fieldglass Approval API allows clients to approve or reject SAP Fieldglass work items. Clients retrieve the work items pending an approval action from the authenticated user and return the workflow action to be performed (either approve or reject). The list and details provided by the SAP Fieldglass API give clients the ability to present work items for approval to their users with the level of detail needed to make an informed approval decision and the mechanism to return the approval or rejection decision."
+  description: This is a generated connector for SAP Fieldglass Approval API API v1.0.0 OpenAPI specification.
   termsOfService: https://www.fieldglass.net/TermsOfUse.en_US.pdf
   x-ballerina-init-description: 'The connector initialization requires setting the API credentials.
 
@@ -334,6 +334,19 @@ paths:
               example: <html><body><b>Http/1.1 Service Unavailable</b></body> </html>
 components:
   schemas:
+    Status:
+      type: object
+      properties:
+        TransactionID:
+          type: string
+          description: Transaction ID.
+        ReturnCode:
+          type: integer
+          description: Return code.
+          format: int32
+        Message:
+          type: string
+          description: Message.
     approvals:
       type: object
       properties:
@@ -429,19 +442,6 @@ components:
                 description: Ok if response is OK.
     Error:
       type: string
-    Status:
-      type: object
-      properties:
-        TransactionID:
-          type: string
-          description: Transaction ID.
-        ReturnCode:
-          type: integer
-          description: Return code.
-          format: int32
-        Message:
-          type: string
-          description: Message.
   securitySchemes:
     OAuth2:
       type: oauth2

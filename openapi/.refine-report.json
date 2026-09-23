@@ -1,30 +1,53 @@
 {
   "provider": "sap-fieldglass",
   "sources": [
-    "sap-fieldglass-approval-api-openapi.yml",
-    "sap-fieldglass-audit-trail-api-openapi.yml",
-    "sap-fieldglass-get-data-api-openapi.yml",
-    "sap-fieldglass-get-entities-api-openapi.yml",
-    "sap-fieldglass-get-metadata-api-openapi.yml",
-    "sap-fieldglass-get-providers-api-openapi.yml",
-    "sap-fieldglass-order-confirmation-api-openapi.yml",
-    "sap-fieldglass-reports-api-openapi.yml",
-    "sap-fieldglass-results-api-openapi.yml"
+    "_original/sap-fieldglass-approval-openapi.yaml",
+    "_original/sap-fieldglass-audit-trail-openapi.json",
+    "_original/sap-fieldglass-background-check-openapi.json",
+    "_original/sap-fieldglass-business-analytics-openapi.json",
+    "_original/sap-fieldglass-odata-analytic-openapi.json"
   ],
   "outputs": [
     "sap-fieldglass-approval-api-openapi.yml",
     "sap-fieldglass-audit-trail-api-openapi.yml",
+    "sap-fieldglass-order-confirmation-api-openapi.yml",
+    "sap-fieldglass-results-api-openapi.yml",
+    "sap-fieldglass-reports-api-openapi.yml",
     "sap-fieldglass-get-data-api-openapi.yml",
     "sap-fieldglass-get-entities-api-openapi.yml",
     "sap-fieldglass-get-metadata-api-openapi.yml",
-    "sap-fieldglass-get-providers-api-openapi.yml",
-    "sap-fieldglass-order-confirmation-api-openapi.yml",
-    "sap-fieldglass-reports-api-openapi.yml",
-    "sap-fieldglass-results-api-openapi.yml"
+    "sap-fieldglass-get-providers-api-openapi.yml"
   ],
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (5 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "sap-fieldglass-approval-openapi.yaml: upgraded openapi 3.0.1 -> OpenAPI 3.2.0",
+    "sap-fieldglass-approval-openapi.yaml: declared missing tag: Approval",
+    "sap-fieldglass-audit-trail-openapi.json: upgraded swagger 2.0 -> OpenAPI 3.2.0",
+    "sap-fieldglass-audit-trail-openapi.json: declared missing tag: Audit Trail",
+    "sap-fieldglass-background-check-openapi.json: upgraded swagger 2.0 -> OpenAPI 3.2.0",
+    "sap-fieldglass-background-check-openapi.json: declared missing tag: Order Confirmation",
+    "sap-fieldglass-background-check-openapi.json: declared missing tag: Results",
+    "sap-fieldglass-business-analytics-openapi.json: upgraded swagger 2.0 -> OpenAPI 3.2.0",
+    "sap-fieldglass-business-analytics-openapi.json: declared missing tag: Reports",
+    "sap-fieldglass-odata-analytic-openapi.json: upgraded swagger 2.0 -> OpenAPI 3.2.0",
+    "sap-fieldglass-odata-analytic-openapi.json: declared missing tag: Get Data",
+    "sap-fieldglass-odata-analytic-openapi.json: declared missing tag: Get Entities",
+    "sap-fieldglass-odata-analytic-openapi.json: declared missing tag: Get Metadata",
+    "sap-fieldglass-odata-analytic-openapi.json: declared missing tag: Get Providers",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "sap-fieldglass-approval-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sap-fieldglass-audit-trail-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sap-fieldglass-get-data-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sap-fieldglass-get-entities-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sap-fieldglass-get-metadata-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sap-fieldglass-get-providers-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sap-fieldglass-order-confirmation-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sap-fieldglass-reports-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sap-fieldglass-results-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
