@@ -70,21 +70,6 @@ paths:
       operationId: getByServiceURL
       x-operation-id-source: derived
 components:
-  parameters:
-    headerApplicationKey:
-      name: X-ApplicationKey
-      description: The company-specific key provided by SAP Fieldglass for API access.
-      in: header
-      required: false
-      schema:
-        type: string
-    headerAuthorization:
-      name: Authorization
-      description: Only required for production access when using SAP Fieldglass.
-      in: header
-      required: false
-      schema:
-        type: string
   schemas:
     Status:
       type: object
@@ -115,6 +100,21 @@ components:
               url:
                 type: string
                 example: workers
+  parameters:
+    headerApplicationKey:
+      name: X-ApplicationKey
+      description: The company-specific key provided by SAP Fieldglass for API access.
+      in: header
+      required: false
+      schema:
+        type: string
+    headerAuthorization:
+      name: Authorization
+      description: Only required for production access when using SAP Fieldglass.
+      in: header
+      required: false
+      schema:
+        type: string
   securitySchemes:
     OAuth2:
       type: oauth2

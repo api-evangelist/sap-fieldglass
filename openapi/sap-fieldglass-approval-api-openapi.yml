@@ -334,6 +334,8 @@ paths:
               example: <html><body><b>Http/1.1 Service Unavailable</b></body> </html>
 components:
   schemas:
+    Error:
+      type: string
     Status:
       type: object
       properties:
@@ -440,8 +442,6 @@ components:
               ActivityID:
                 type: string
                 description: Ok if response is OK.
-    Error:
-      type: string
   securitySchemes:
     OAuth2:
       type: oauth2

@@ -111,6 +111,16 @@ paths:
                 $ref: '#/components/schemas/Error'
 components:
   schemas:
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
+        fields:
+          type: string
     report:
       type: object
       properties:
@@ -146,16 +156,6 @@ components:
         scale:
           type: string
           description: Scale.
-    Error:
-      type: object
-      properties:
-        code:
-          type: integer
-          format: int32
-        message:
-          type: string
-        fields:
-          type: string
   securitySchemes:
     OAuth2:
       type: oauth2
