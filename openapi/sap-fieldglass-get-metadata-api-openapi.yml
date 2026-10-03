@@ -71,6 +71,8 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    Error:
+      type: string
     Status:
       type: object
       properties:
@@ -155,19 +157,17 @@ components:
                                 Bool:
                                   type: string
                                   example: 'false'
-    Error:
-      type: string
   parameters:
-    headerApplicationKey:
-      name: X-ApplicationKey
-      description: The company-specific key provided by SAP Fieldglass for API access.
+    headerAuthorization:
+      name: Authorization
+      description: Only required for production access when using SAP Fieldglass.
       in: header
       required: false
       schema:
         type: string
-    headerAuthorization:
-      name: Authorization
-      description: Only required for production access when using SAP Fieldglass.
+    headerApplicationKey:
+      name: X-ApplicationKey
+      description: The company-specific key provided by SAP Fieldglass for API access.
       in: header
       required: false
       schema:

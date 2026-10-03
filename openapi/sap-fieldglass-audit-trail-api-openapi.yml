@@ -97,6 +97,16 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
+        fields:
+          type: string
     auditTrail:
       type: object
       properties:
@@ -201,16 +211,6 @@ components:
               status:
                 type: string
                 description: Ok if response is OK.
-    Error:
-      type: object
-      properties:
-        code:
-          type: integer
-          format: int32
-        message:
-          type: string
-        fields:
-          type: string
   securitySchemes:
     OAuth2:
       type: oauth2
