@@ -70,36 +70,6 @@ paths:
       operationId: getByServiceURL
       x-operation-id-source: derived
 components:
-  schemas:
-    Error:
-      type: string
-    Status:
-      type: object
-      properties:
-        TransactionID:
-          type: string
-          description: Transaction ID.
-        ReturnCode:
-          type: integer
-          format: int32
-          description: Return Code
-        Message:
-          type: string
-          description: Message
-    ServiceURL:
-      type: object
-      properties:
-        value:
-          type: array
-          items:
-            type: object
-            properties:
-              name:
-                type: string
-                example: workers
-              url:
-                type: string
-                example: workers
   parameters:
     headerAuthorization:
       name: Authorization
@@ -115,6 +85,36 @@ components:
       required: false
       schema:
         type: string
+  schemas:
+    Status:
+      type: object
+      properties:
+        TransactionID:
+          type: string
+          description: Transaction ID.
+        ReturnCode:
+          type: integer
+          format: int32
+          description: Return Code
+        Message:
+          type: string
+          description: Message
+    Error:
+      type: string
+    ServiceURL:
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                example: workers
+              url:
+                type: string
+                example: workers
   securitySchemes:
     OAuth2:
       type: oauth2

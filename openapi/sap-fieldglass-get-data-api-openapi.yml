@@ -105,25 +105,6 @@ paths:
       x-operation-id-source: derived
 components:
   parameters:
-    skip:
-      name: $skip
-      in: query
-      description: Excludes the number of items specified from the collection. For more information, see [OData Paging - Skip](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html#_Toc445374631).
-      schema:
-        type: integer
-    filter:
-      name: $filter
-      in: query
-      description: Restricts the items returned by property values. For more information, see see [OData Filtering](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html#_Toc445374625).
-      schema:
-        type: string
-    top:
-      name: $top
-      in: query
-      description: Limits the number of items returned, up to but not exceeding the number specified. For more information, see [OData Paging - Top](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html#_Toc445374630).
-      schema:
-        type: integer
-        default: 20
     headerAuthorization:
       name: Authorization
       description: Only required for production access when using SAP Fieldglass.
@@ -131,6 +112,25 @@ components:
       required: false
       schema:
         type: string
+    filter:
+      name: $filter
+      in: query
+      description: Restricts the items returned by property values. For more information, see see [OData Filtering](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html#_Toc445374625).
+      schema:
+        type: string
+    skip:
+      name: $skip
+      in: query
+      description: Excludes the number of items specified from the collection. For more information, see [OData Paging - Skip](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html#_Toc445374631).
+      schema:
+        type: integer
+    top:
+      name: $top
+      in: query
+      description: Limits the number of items returned, up to but not exceeding the number specified. For more information, see [OData Paging - Top](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html#_Toc445374630).
+      schema:
+        type: integer
+        default: 20
     headerApplicationKey:
       name: X-ApplicationKey
       description: The company-specific key provided by SAP Fieldglass for API access.
@@ -139,8 +139,6 @@ components:
       schema:
         type: string
   schemas:
-    Error:
-      type: string
     Status:
       type: object
       properties:
@@ -154,6 +152,8 @@ components:
         Message:
           type: string
           description: Message
+    Error:
+      type: string
     Data:
       properties:
         value:
