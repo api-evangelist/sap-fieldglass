@@ -319,6 +319,9 @@ apis:
   - type: Hub
     url: https://api.sap.com/package/FieldglassAPI/rest
 common:
+- type: CapabilityMap
+  url: capabilities/sap-fieldglass-capability-edges.yml
+  name: SAP Fieldglass Business Capability Map
 - type: ParentCompany
   url: https://apis.io/providers/sap/
   name: Sap

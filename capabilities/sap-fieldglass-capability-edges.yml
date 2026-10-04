@@ -1,0 +1,26 @@
+slug: sap-fieldglass
+provider: SAP Fieldglass
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: Results
+  spec_file: sap-fieldglass-results-api-openapi.yml
+  capability_id: BC-300.10
+  capability_id_l1: BC-300
+  capability_name: Talent Acquisition Management
+  confidence: 0.7
+  evidence: The SAP Fieldglass Background Check REST API resource allows background check providers to
+    post results back to SAP Fieldglass
+  reason: Background check results posted against a contingent work order — screening of candidates/workers,
+    closest to talent acquisition/onboarding screening within Human Capital Management. Some ambiguity
+    since it concerns contingent workforce procurement rather than employees, hence moderate confidence.
