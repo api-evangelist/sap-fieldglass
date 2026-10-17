@@ -334,6 +334,19 @@ paths:
               example: <html><body><b>Http/1.1 Service Unavailable</b></body> </html>
 components:
   schemas:
+    Status:
+      type: object
+      properties:
+        TransactionID:
+          type: string
+          description: Transaction ID.
+        ReturnCode:
+          type: integer
+          description: Return code.
+          format: int32
+        Message:
+          type: string
+          description: Message.
     Error:
       type: string
     approvals:
@@ -429,19 +442,6 @@ components:
               ActivityID:
                 type: string
                 description: Ok if response is OK.
-    Status:
-      type: object
-      properties:
-        TransactionID:
-          type: string
-          description: Transaction ID.
-        ReturnCode:
-          type: integer
-          description: Return code.
-          format: int32
-        Message:
-          type: string
-          description: Message.
   securitySchemes:
     OAuth2:
       type: oauth2

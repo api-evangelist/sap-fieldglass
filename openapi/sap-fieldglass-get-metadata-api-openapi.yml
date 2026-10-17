@@ -71,13 +71,6 @@ paths:
       x-operation-id-source: derived
 components:
   parameters:
-    headerAuthorization:
-      name: Authorization
-      description: Only required for production access when using SAP Fieldglass.
-      in: header
-      required: false
-      schema:
-        type: string
     headerApplicationKey:
       name: X-ApplicationKey
       description: The company-specific key provided by SAP Fieldglass for API access.
@@ -85,20 +78,16 @@ components:
       required: false
       schema:
         type: string
+    headerAuthorization:
+      name: Authorization
+      description: Only required for production access when using SAP Fieldglass.
+      in: header
+      required: false
+      schema:
+        type: string
   schemas:
-    Status:
-      type: object
-      properties:
-        TransactionID:
-          type: string
-          description: Transaction ID.
-        ReturnCode:
-          type: integer
-          format: int32
-          description: Return Code
-        Message:
-          type: string
-          description: Message
+    Error:
+      type: string
     metaData:
       properties:
         Schema:
@@ -170,8 +159,19 @@ components:
                                 Bool:
                                   type: string
                                   example: 'false'
-    Error:
-      type: string
+    Status:
+      type: object
+      properties:
+        TransactionID:
+          type: string
+          description: Transaction ID.
+        ReturnCode:
+          type: integer
+          format: int32
+          description: Return Code
+        Message:
+          type: string
+          description: Message
   securitySchemes:
     OAuth2:
       type: oauth2
