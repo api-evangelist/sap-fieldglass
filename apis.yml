@@ -75,6 +75,11 @@ apis:
   humanURL: https://api.sap.com/api/scim/overview
   baseURL: https://www.fieldglass.net/api/scim
   tags:
+  - Identity and Access Management
+  - Provisioning
+  - SCIM
+  - User Management
+  tags_raw:
   - Identity Management
   - Provisioning
   - SCIM
